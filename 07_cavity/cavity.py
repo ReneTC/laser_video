@@ -9,7 +9,7 @@ class Atom:
         self.pos = Vector(0,0)
 
         self.n0 = 0
-        self.n1 = 20
+        self.n1 = 25
 
         self.n1_ht = 15
 
@@ -27,29 +27,32 @@ class Atom:
 
         center = Vector(0,0)
         # proton
+        with push_style():
+            fill(240)
+            circle(center,80)
         # energy levels circles
         with push_style():
             stroke_weight(3)
-            stroke('#dadada')
+            stroke(150)
             fill(0,0,0,0)
             with push_matrix():
-
-                line((-30,self.n0),(30,self.n0))
-            with push_matrix():
-                line((-30,self.n1),(30,self.n1))
+                translate(0,-self.n1/2)
+                line((-20,self.n0),(20,self.n0))
+                line((-20,self.n1),(20,self.n1))
 
         with push_matrix():
             fill(0)
+            translate(0,-self.n1/2)
             translate(0,self.n0)
             scale(interpolate(self.n1_occ,self.n0_occ,self.inteaction_frame,duration = 10))
             circle((0,0),15)
 
         with push_matrix():
+            translate(0,-self.n1/2)
             translate(0,self.n1)
             scale(interpolate(self.n0_occ,self.n1_occ,self.inteaction_frame,duration = 10))
             fill(0)
             circle((0,0),15)
-
 
 
     def interaction(self, photon):
@@ -67,6 +70,7 @@ class Atom:
 
         if distance < 40:
             return True
+
 
     def excite(self):
         self.inteaction_frame = frame_count
@@ -107,7 +111,7 @@ def draw():
     scale(1,-1)
 
     stroke(0)
-    stroke_weight(3)
+    stroke_weight(4)
     time = 0
 
     bredde = 700
