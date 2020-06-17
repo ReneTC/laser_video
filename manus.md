@@ -9,11 +9,11 @@ In this video, I'll show you the physics of lasers, and simulate a working laser
 Consider helping me create more free physics material, by supporting with whatever you want on Patreon.
 
 ### Light and atom interaction
-The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. The atom as a nuclei as well.
+The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. The atom as a nucleus as well.
 
 <img src="./00_atom_reveal/atom/atom.gif"/>
 
-Off course the picture of this atom is completely wrong, but it gets the physics right, because the distance here represent energy levels. The picture also get the physics right because the orbits or the circles represents states for the electron. The electron can ONLY exists where there is a state. To switch state the electron will do a quantum jump: that is, teleport to another state. But to teleport requires some energy. One way to get that is if the electron absorbs a photon. That's called **abortion**. Once the electron is then in a excited state, it will fall down after some random time depending on the half life of that state. The processes is called **Emission**, and it releases a photon in a random direction in this processes.
+Off course the picture of this atom is completely wrong, but it gets the physics right, because the distance here represent energy levels. The picture also get the physics right because the orbits or the circles represents states for the electron. The electron can ONLY exists where there is a state. To switch state the electron will do a quantum jump: that is, teleport to another state. But to teleport requires some energy. One way to get that is if the electron absorbs a photon. That's called **Stimulated Absorption**. Once the electron is then in a excited state, it will fall down after some random time depending on the half life of that state. The processes is called **Spontaneous Emission**, and it releases a photon in a random direction in this processes.
 <img src="./01_atom_interaction/interaction/interaction.gif"/>
 
 Any photon that interacts with the electron wont excite it. To excite the electron, to photon have to have the exact same energy as the energy difference between the two states. One example could be a excitation energy of 2.00 electron volts. The energy of a photon is perceived as color in our eyes - and 2.00 eV corresponds to red.
@@ -42,4 +42,4 @@ And draw then on a energy diagram. Our electron can off course again only exists
 
 ### Optical cavity
 
-Now I want to build an actual laser system. It's just a system that exploits *stimulated emission*. So first, I'll make a box called a optical cavity. I'll put a bunch of 2-level atoms in there as well. Remember, I represent an atom just with the two states an electron can be in. 
+Now I want to build an actual laser system. It's just a system that exploits *stimulated emission*. So first, I'll make a box called a optical cavity. I'll put a bunch of 2-level atoms in there as well. Remember, I represent an atom just with the two states an electron can be in.
