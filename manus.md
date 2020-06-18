@@ -22,7 +22,11 @@ Any photon that interacts with the electron wont excite it. To excite the electr
 here is an example: a photon of incorrect energy 4,00 eV a violet color, flies into the electron. Nothing happens. A photon with 2 eV then flies into the electron and excites the electron. After some random time, the electron de-excites and sends out a 2 eV photon in a random direction.
 <img src="./03_correct_color_interact/correct_color_int/correct_color_int.gif"/>
 
-It turns out there is one more type of interaction: the **Stimulated emission**. This interaction happens when an excited electron, interacts with a photon of the same excitation energy. In the example below the electron is excited to a 2.00 eV sate. A 2.00 eV photons interacts with the electron. The interaction de-excites the electron and sends out another 2.00 eV photon.
+Did you have have these self glowing stars as a kid? How did it work? The atoms in the plastic have been shined upon by white light before dark. Some electrons then underwent stimulated emission, stimulated by a specific frequency from the white light. The excited state have a very long life-time, and the electron undergoes spontaneous emission hours later! This processes is called fluorescence.
+
+<img src="stars.jpg"/>
+
+It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron, interacts with a photon of the same excitation energy. In the example below the electron is excited to a 2.00 eV sate. A 2.00 eV photons interacts with the electron. The interaction de-excites the electron and sends out another 2.00 eV photon.
 
 <img src="./04_stim_em/stim_em/stim_em.gif"/>
 
