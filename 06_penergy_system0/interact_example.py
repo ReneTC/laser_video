@@ -135,8 +135,8 @@ def setup():
 atom = Atom2()
 new_atom = Atom((500,100))
 atoms = [atom,new_atom]
-phot2 = Photon2(Vector(-1000,200),Vector(1,0),100)
-phot1 = Photon(Vector(1000,100),Vector(-1,0),25)
+phot2 = Photon2(Vector(-990,200),Vector(1,0),100)
+phot1 = Photon(Vector(1150,100),Vector(-1,0),15)
 photons = [phot2,phot1]
 
 def draw():
@@ -173,5 +173,5 @@ def draw():
     # saver()
 
 
-to_gif()
-# run(frame_rate=30)
+# to_gif()
+run(frame_rate=30)

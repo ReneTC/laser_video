@@ -9,8 +9,9 @@ def draw():
     background(0)
 
     fill(255)
-    scale(1,0.1)
-    rect((0, 0), 200, 200)
+    offset = 20
+    rotate(angle+PI/4)
+    triangle((offset*0.5, offset),(-offset/2, offset),(0.5,-offset/2))
 
 
 if __name__ == '__main__':

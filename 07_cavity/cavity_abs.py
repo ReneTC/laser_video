@@ -26,7 +26,7 @@ def draw():
 
 
     # flash and randomly excite
-    if frame_count%30 == 0:
+    if frame_count == 30:
         strope.flash(atoms,photons)
 
     #show all atoms
@@ -37,7 +37,6 @@ def draw():
     for p in photons:
         p.show()
 
-    # check if photons should be destroid or bounced
     for p in photons:
         if p.pos[1] > 250-10 or p.pos[1] < - 250+10:
             photons.remove(p)
@@ -46,13 +45,21 @@ def draw():
         elif p.pos[0] < - 700 and p.pos[0] < 0:
             p.dir[0] = -1*p.dir[0]
 
+    # check if photons should be destroid or bounced
+    for p in photons:
+        if p.pos[1] > 250-10 or p.pos[1] < - 250+10:
+            photons.remove(p)
+        if p.pos[0] > 700 or p.pos[0] < - 700:
+            p.dir[0] = -1*p.dir[0]
+
+
     # for all excited atoms randomly see if they should de-excite
     for a in atoms:
         if a.n1_occ == 1:
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-
+    # saver()
     if frame_count > frames:
         exit()
 
