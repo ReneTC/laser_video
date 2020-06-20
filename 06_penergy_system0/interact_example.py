@@ -2,9 +2,9 @@ from pymin import *
 import random
 
 frames = 130
-class Atom:
+class Atom2:
     def __init__(self):
-        self.pos = Vector(0,0)
+        self.pos = Vector(-300,0)
         self.excited = 0
 
         self.n0 = 200
@@ -29,6 +29,7 @@ class Atom:
         with push_style():
             fill('#dadada')
             with push_matrix():
+                translate(self.pos[0],self.pos[1])
                 circle(center,100)
                 fill(0)
                 Text("N",(0,20),size=30)
@@ -38,11 +39,14 @@ class Atom:
             stroke(0)
             fill(0,0,0,0)
             with push_matrix():
+                translate(self.pos[0],self.pos[1])
                 circle(center,self.n0*2)
             with push_matrix():
+                translate(self.pos[0],self.pos[1])
                 circle(center,self.n1*2)
 
         with push_matrix():
+            translate(self.pos[0],self.pos[1])
             fill('#dadada')
             translate(0,self.n0)
             scale(interpolate(self.n1_occ,self.n0_occ,self.inteaction_frame,duration = 10))
@@ -51,13 +55,13 @@ class Atom:
             Text("e",(0,22,),size=30)
 
         with push_matrix():
+            translate(self.pos[0],self.pos[1])
             translate(0,self.n1)
             scale(interpolate(self.n0_occ,self.n1_occ,self.inteaction_frame,duration = 10))
             fill('#dadada')
             circle((0,0),50)
             fill(0)
             Text("e",(0,22,),size=30)
-
 
 
     def interaction(self, photon):
@@ -82,7 +86,7 @@ class Atom:
         self.n0_occ = 0
         self.n1_occ = 1
 
-    def de_excite(self):
+    def de_excite(self,photons):
 
         self.inteaction_frame = frame_count
         self.n0_occ = 1
@@ -91,12 +95,12 @@ class Atom:
         ran_x = random.randint(-100,100)
         ran_y = random.randint(-100,100)
 
-        new_pos = Vector(ran_x,ran_y).normalize()*100+self.n0_pos/2+self.n1_pos/2
-        photons.append(Photon(new_pos,Vector(ran_x,ran_y),self.n1 - self.n0 ))
+        new_pos = Vector(ran_x,ran_y).normalize()*100+self.pos
+        photons.append(Photon2(new_pos,Vector(ran_x,ran_y),self.n1 - self.n0 ))
 
 
 
-class Photon:
+class Photon2:
     def __init__(self,pos,direc,energy):
         self.pos = pos
         self.dir = direc.normalize()
@@ -128,11 +132,12 @@ def setup():
     size(width, height)
 
 
-atom = Atom()
-atoms = [atom]
-phot = Photon(Vector(-400,200),Vector(1,0),300)
-phot2 = Photon(Vector(-1000,200),Vector(1,0),100)
-photons = [phot,phot2]
+atom = Atom2()
+new_atom = Atom((500,100))
+atoms = [atom,new_atom]
+phot2 = Photon2(Vector(-1000,200),Vector(1,0),100)
+phot1 = Photon(Vector(1000,100),Vector(-1,0),25)
+photons = [phot2,phot1]
 
 def draw():
     translate(width/2,height/2)
@@ -159,12 +164,14 @@ def draw():
     for a in atoms:
         if a.n1_occ == 1:
             if random.randint(0,a.n1_ht) == 1:
-                a.de_excite()
+                a.de_excite(photons)
 
     # saver()
     if frame_count > frames:
         exit()
 
+    # saver()
 
-# to_gif()
-run(frame_rate=30)
+
+to_gif()
+# run(frame_rate=30)

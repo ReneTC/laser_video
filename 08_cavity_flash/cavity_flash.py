@@ -1,12 +1,16 @@
 from pymin import *
+import random
 
 frames = 190
 
 def setup():
     size(width, height)
 
+atoms = []
+photons = []
+for i in range(0,10):
+    atoms.append(Atom((-650+i*140,random.randint(-200,200))))
 
-atom = Atom()
 strope = Strope()
 
 def draw():
@@ -17,20 +21,27 @@ def draw():
     scale(1,-1)
     stroke(0)
     stroke_weight(4)
-    time = 0
-
     draw_box()
-
     strope.show()
-    Text(str(frame_count), (0,-300),size=50)
-    # if frame_count % 30 == 0:
-    #     print(frame_count, "flash")
-    #     strope.flash()
-    if frame_count == 30:
-        print(frame_count, "flash")
-        strope.flash()
 
-    atom.show()
+
+    # flash and randomly excite
+    if frame_count %30 == 0:
+        strope.flash(atoms,photons)
+
+    #show all atoms
+    for a in atoms:
+        a.show()
+
+    #show all atoms
+    for p in photons:
+        p.show()
+
+    # for all excited atoms randomly see if they should de-excite
+    for a in atoms:
+        if a.n1_occ == 1:
+            if random.randint(0,a.n1_ht) == 1:
+                a.de_excite(photons)
 
     if frame_count > frames:
         exit()

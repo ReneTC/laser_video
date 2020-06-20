@@ -79,5 +79,5 @@ def draw():
 
     # saver()
 
-# run()
-to_gif()
+run()
+# to_gif()
