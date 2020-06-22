@@ -1,18 +1,20 @@
-from p5 import *
+from ProcessingQt import *
+
+import random
 
 def setup():
-        size(640, 360)
+	size(500, 500)
 
 def draw():
-    no_stroke()
+	background(255, 255, 255) # only (r, g, b) API is supported for now
 
-    background(0)
+	s = 50
+	# stroke_weight(5)
 
-    fill(255)
-    offset = 20
-    rotate(angle+PI/4)
-    triangle((offset*0.5, offset),(-offset/2, offset),(0.5,-offset/2))
+	for x in range(s):
+		for y in range(s):
+			fill(255, 0, 0)
+			point(random.randint(0, width), random.randint(0, height))
 
 
-if __name__ == '__main__':
-  run()
+run()
