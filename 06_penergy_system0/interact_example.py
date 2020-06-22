@@ -172,6 +172,6 @@ def draw():
 
     # saver()
 
-
-# run(frame_rate=30)
-to_gif()
+#
+run(frame_rate=30)
+# to_gif()

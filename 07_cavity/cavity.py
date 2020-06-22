@@ -1,6 +1,6 @@
 from pymin import *
 
-frames = 190
+frames = 210
 
 
 class Strope:
@@ -70,13 +70,18 @@ def draw():
         strope.show()
 
 
-    # with push_style():
-    #     scale_in_out(60,999)
-    #     atom.show()
+    with push_style():
+        stroke(5)
+        scale_in_out(60,999)
+        fill('#dadada')
+        rect((-720, -250), 20, 500)
+        fill('#dadada')
+        rect((700, -250), 20, 500)
+
     if frame_count > frames:
+        to_gif()
         exit()
 
-    # saver()
+    saver()
 
 run()
-# to_gif()

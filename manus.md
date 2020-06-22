@@ -36,14 +36,21 @@ Because the frequency is the same, the color or energy is the same for the two p
 
 **L. A. S. E. R** stands for Light amplification by *stimulated emission* of radiation. So lasers works by exploiting that interaction. Let me show you how.
 
-But first, I am a physicist so I love to boil down to the absolute simplest system we can. And right now the nucleus and the circularize representation of states, doesn't do anything.. So instead of the previous system, let's just look at the two states:
+But first, I'll need to show many atoms later so let me simplify and resize the representation of the atom and the photon.  I'll show the photon as a small arrow and the atom is a grey circle. The atom is red when it has an excited electron in the 2.00 eV state.
 
-<img src="./06_penergy_system0/Marker/Marker.gif"/>
+<img src="./06_penergy_system0/interact_example/interact_example.gif"/>
 
-And draw then on a energy diagram. Our electron can off course again only exists in these two levels. And can interact with a photon just as shown before.
+### Optical Cavity
 
-<img src="./06_penergy_system0/main/main.gif"/>
+the exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrros they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity there will be what's called a "gain medium". It's some material that can do this stimulated emission for us - real world example could be a synthetic ruby crystal or Helium Neon gas.
 
-### Optical cavity
+The optical cavity will also have a optical pump - actually all around the optical cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
-Now I want to build an actual laser system. It's just a system that exploits *stimulated emission*. So first, I'll make a box called a optical cavity. I'll put a bunch of 2-level atoms in there as well. Remember, I represent an atom just with the two states an electron can be in.
+<img src="./07_cavity/cavity/cavity.gif"/>
+
+Now I'll put a few atoms in our cavity as a gain medium. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 range, the energy needed to excite our atom. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously de-excite and send out a 2.00 eV photon.
+
+<img src="./07_cavity/cavity_abs/cavity_abs.gif"/>
+
+Let's flash with the pump twice rather quickly - between the first and the second flash, some electron will de-excite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will releause two photons in a random direction. 
+<img src="./07_cavity/cavity_stim/cavity_stim.gif"/>

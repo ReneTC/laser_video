@@ -10,8 +10,7 @@ atoms = []
 photons = []
 for i in range(0,10):
     atoms.append(Atom((-650+i*140,0)))
-for a in atoms:
-    a.excite()
+
 strope = Strope()
 
 def draw():
@@ -29,34 +28,34 @@ def draw():
     # flash and randomly excite
     if frame_count == 30:
         strope.flash(atoms,photons)
+    # flash and randomly excite
+    if frame_count == 15:
+        strope.flash(atoms,photons)
 
     #show all atoms
     for a in atoms:
         a.show()
 
-    #show all photons
-    for p in photons:
+    for p in reversed(photons):
         p.show()
-
-    # check if photons should be destroid or bounced
-    for p in photons:
-        if p.pos[1] > 250-10 or p.pos[1] < - 250+10:
+        if p.pos[0] > 700:
+            p.dir[0] = -1*p.dir[0]
+        elif p.pos[0] < -700:
+            p.dir[0] = -1*p.dir[0]
+        elif p.pos[1] > 250-15 or p.pos[1] < - 250+10:
             photons.remove(p)
-        elif p.pos[0] > 700 and p.pos[0] > 0:
-            p.dir[0] = -1*p.dir[0]
-        elif p.pos[0] < - 700 and p.pos[0] < 0:
-            p.dir[0] = -1*p.dir[0]
+
 
 
     # for all excited atoms randomly see if they should de-excite
     for a in atoms:
         if a.n1_occ == 1:
             if random.randint(0,a.n1_ht) == 1:
-                # a.de_excite(photons)
-                pass
+                a.de_excite(photons)
 
-
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 run(frame_rate=30)
