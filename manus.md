@@ -19,14 +19,14 @@ Off course the picture of this atom is completely wrong, but it gets the physics
 Any photon that interacts with the electron wont excite it. To excite the electron, to photon have to have the exact same energy as the energy difference between the two states. One example could be a excitation energy of 2.00 electron volts. The energy of a photon is perceived as color in our eyes - and 2.00 eV corresponds to red.
 <img src="./02_correct_color/correct_color/correct_color.gif"/>
 
-here is an example: a photon of incorrect energy 4,00 eV a violet color, flies into the electron. Nothing happens. A photon with 2 eV then flies into the electron and excites the electron. After some random time, the electron de-excites and sends out a 2 eV photon in a random direction.
+here is an example: a photon of incorrect energy 4,00 eV a violet color, flies into the electron. Nothing happens. A photon with 2 eV then flies into the electron and excites the electron. After some random time, the electron deexcites and sends out a 2 eV photon in a random direction.
 <img src="./03_correct_color_interact/correct_color_int/correct_color_int.gif"/>
 
 Did you have have these self glowing stars as a kid? How did it work? The atoms in the plastic have been shined upon by white light before dark. Some electrons then underwent stimulated emission, stimulated by a specific frequency from the white light. The excited state have a very long life-time, and the electron undergoes spontaneous emission hours later! This processes is called fluorescence.
 
 <img src="stars.jpg"/>
 
-It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron, interacts with a photon of the same excitation energy. In the example below the electron is excited to a 2.00 eV sate. A 2.00 eV photons interacts with the electron. The interaction de-excites the electron and sends out another 2.00 eV photon.
+It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron, interacts with a photon of the same excitation energy. In the example below the electron is excited to a 2.00 eV sate. A 2.00 eV photons interacts with the electron. The interaction deexcites the electron and sends out another 2.00 eV photon.
 
 <img src="./04_stim_em/stim_em/stim_em.gif"/>
 
@@ -40,17 +40,21 @@ But first, I'll need to show many atoms later so let me simplify and resize the 
 
 <img src="./06_penergy_system0/interact_example/interact_example.gif"/>
 
+Off course we can also represent stimulated emission with the new representation
+
+<img src="./06_penergy_system0/stim_em2/stim_em2.gif"/>
+
 ### Optical Cavity
 
-the exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrros they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity there will be what's called a "gain medium". It's some material that can do this stimulated emission for us - real world example could be a synthetic ruby crystal or Helium Neon gas.
+the exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrors they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity there will be what's called a "gain medium". It's some material that can do this stimulated emission for us - real world example could be a synthetic ruby crystal or Helium Neon gas.
 
 The optical cavity will also have a optical pump - actually all around the optical cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
 <img src="./07_cavity/cavity/cavity.gif"/>
 
-Now I'll put a few atoms in our cavity as a gain medium. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 range, the energy needed to excite our atom. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously de-excite and send out a 2.00 eV photon.
+Now I'll put a few atoms in our cavity as a gain medium. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 range, the energy needed to excite our atom. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
 
 <img src="./07_cavity/cavity_abs/cavity_abs.gif"/>
 
-Let's flash with the pump twice rather quickly - between the first and the second flash, some electron will de-excite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will releause two photons in a random direction. 
+Let's flash with the pump twice rather quickly - between the first and the second flash, some electron will deexcite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will release two photons in a random direction.
 <img src="./07_cavity/cavity_stim/cavity_stim.gif"/>
