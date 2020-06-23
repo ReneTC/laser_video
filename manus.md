@@ -52,9 +52,21 @@ The optical cavity will also have a optical pump - actually all around the optic
 
 <img src="./07_cavity/cavity/cavity.gif"/>
 
-Now I'll put a few atoms in our cavity as a gain medium. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 range, the energy needed to excite our atom. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
+Now I'll put a few atoms in our cavity as a gain medium. And I'll let the pump flash once. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 eV red range - the energy needed to excite our atoms. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon from a random direction. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
 
 <img src="./07_cavity/cavity_abs/cavity_abs.gif"/>
+We are not quite there, but we are almost ready to produce a laser. This is the idea of producing laser light:
 
-Let's flash with the pump twice rather quickly - between the first and the second flash, some electron will deexcite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will release two photons in a random direction.
-<img src="./07_cavity/cavity_stim/cavity_stim.gif"/>
+1. We will continuously excite the atoms with the pump.
+2. Wait for one of the atoms to send out a photon parallel to the mirrors by spontaneous emission.
+3.  Then the photon will bounce around and create more photons by stimulated emission.
+
+Let me place a photon parallel and flash the pump once. To see the effect
+
+<img src="./07_cavity/cavity_gain_example/cavity_gain_example.gif"/>
+
+Did you see, at one instance the photon got amplified to 3 photons? We had a few problems -------
+
+Let's flash with the pump continuously - between the first and the second flash, some electron will deexcite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will release two photons in a random direction.
+
+<img src="./07_cavity/cavity_gain_example_flash/cavity_gain_example_flash.gif"/>
