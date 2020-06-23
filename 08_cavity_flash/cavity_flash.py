@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 600
+frames = 220
 
 def setup():
     size(width, height)
@@ -9,11 +9,12 @@ def setup():
 atoms = []
 photons = []
 for i in range(0,10):
-    atoms.append(Atom((-650+i*140,0)))
+    for j in range(0,10):
+        atoms.append(Atom((-630+i*140+random.randint(-50,50),j*40-175+random.randint(-30,30))))
 
 strope = Strope()
-
 def draw():
+    exc = 0
     fps_counter()
     translate(width/2,height/2)
 
@@ -32,10 +33,10 @@ def draw():
     #show all atoms
     for a in atoms:
         a.show()
+        if a.n1_occ == 1:
+            exc += 1
 
-    #show all photons
 
-    # check if photons should be destroid or bounced
     for p in reversed(photons):
         p.show()
         if p.pos[0] > 700:
@@ -45,15 +46,28 @@ def draw():
         elif p.pos[1] > 250-15 or p.pos[1] < - 250+10:
             photons.remove(p)
 
+    # listen for photn atom intercation
+    for a in atoms:
+        for p in photons:
+            if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
+                if a.n0_occ == 1:
+                    photons.remove(p)
+                    a.excite()
+                elif a.n1_occ == 1:
+                    a.stim_emis(p,photons)
 
     # for all excited atoms randomly see if they should de-excite
     for a in atoms:
         if a.n1_occ == 1:
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
+
+    no_excited = exc/np.size(atoms)
+    fill(0)
+    Text(str(no_excited),(0,-350))
     # saver()
     if frame_count > frames:
+        # to_gif()
         exit()
 
 run(frame_rate=30)
-# to_gif()

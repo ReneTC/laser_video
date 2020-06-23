@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 190
+frames = 220
 
 def setup():
     size(width, height)
@@ -9,7 +9,8 @@ def setup():
 atoms = []
 photons = []
 for i in range(0,10):
-    atoms.append(Atom((-650+i*140,0)))
+    pass
+    # atoms.append(Atom((-650+i*140,0)))
 
 strope = Strope()
 
@@ -27,6 +28,11 @@ def draw():
 
     # flash and randomly excite
     if frame_count == 30:
+        for i in range(0,40):
+            for j in range(0,40):
+                phot_pos = Vector(-630+i*140/4+random.randint(-50,50),j*10/4+300+random.randint(-30,30))
+                phot_dir = Vector(random.randint(-360,360),random.randint(-360,360))
+                photons.append(Photon((phot_pos),(phot_dir),15))
         strope.flash(atoms,photons)
 
     #show all atoms
@@ -35,12 +41,12 @@ def draw():
 
     for p in reversed(photons):
         p.show()
-        if p.pos[0] > 700:
-            p.dir[0] = -1*p.dir[0]
-        elif p.pos[0] < -700:
-            p.dir[0] = -1*p.dir[0]
-        elif p.pos[1] > 250-15 or p.pos[1] < - 250+10:
-            photons.remove(p)
+        # if p.pos[0] > 700:
+        #     p.dir[0] = -1*p.dir[0]
+        # elif p.pos[0] < -700:
+        #     p.dir[0] = -1*p.dir[0]
+        # elif p.pos[1] > 250-15 or p.pos[1] < - 250+10:
+        #     photons.remove(p)
 
 
 
@@ -50,9 +56,9 @@ def draw():
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-    # saver()
+    saver()
     if frame_count > frames:
-        # to_gif()
+        to_gif()
         exit()
 
 run(frame_rate=30)

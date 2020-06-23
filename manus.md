@@ -22,9 +22,14 @@ Any photon that interacts with the electron wont excite it. To excite the electr
 here is an example: a photon of incorrect energy 4,00 eV a violet color, flies into the electron. Nothing happens. A photon with 2 eV then flies into the electron and excites the electron. After some random time, the electron deexcites and sends out a 2 eV photon in a random direction.
 <img src="./03_correct_color_interact/correct_color_int/correct_color_int.gif"/>
 
-Did you have have these self glowing stars as a kid? How did it work? The atoms in the plastic have been shined upon by white light before dark. Some electrons then underwent stimulated emission, stimulated by a specific frequency from the white light. The excited state have a very long life-time, and the electron undergoes spontaneous emission hours later! This processes is called fluorescence.
+Did you have have these self glowing stars as a kid? How did it work?
 
 <img src="stars.jpg"/>
+
+The atoms in the plastic have been shined upon by white light before dark - off course white light have all visible colors. Some green light then got absorbed by the atom via stimulated emission. The excited state for this specific atom have a very long life-time, and the electron undergoes spontaneous emission hours later at night! This processes is called fluorescence.
+
+<img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
+
 
 It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron, interacts with a photon of the same excitation energy. In the example below the electron is excited to a 2.00 eV sate. A 2.00 eV photons interacts with the electron. The interaction deexcites the electron and sends out another 2.00 eV photon.
 
@@ -52,21 +57,26 @@ The optical cavity will also have a optical pump - actually all around the optic
 
 <img src="./07_cavity/cavity/cavity.gif"/>
 
-Now I'll put a few atoms in our cavity as a gain medium. And I'll let the pump flash once. When the pump flashes, it will create off course create a lot of photons absolutely everywhere. The pump can be tuned to send out the energy in the 2.00 eV red range - the energy needed to excite our atoms. So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon from a random direction. Here the pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
+ The pump can be tuned to send out the energy in the 2.00 eV red range - the energy needed to excite our atoms.
+
+<img src="./07_cavity/cavity_abs_flash/cavity_abs_flash.gif"/>
+That looks way too confusing..  So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, let's say all the atoms are being hit with a photon from a random direction. I'll put a few atoms in the cavity as a gain medium. The pump flashes once, exciting all the atoms in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
 
 <img src="./07_cavity/cavity_abs/cavity_abs.gif"/>
-We are not quite there, but we are almost ready to produce a laser. This is the idea of producing laser light:
 
+We are almost ready to produce a laser. This is the idea of producing laser light is:
+
+0. Obviously there should be many more atoms in the cavity.
 1. We will continuously excite the atoms with the pump.
-2. Wait for one of the atoms to send out a photon parallel to the mirrors by spontaneous emission.
+2. Wait for one of the atoms to send out a photon parallel to the mirrors.
 3.  Then the photon will bounce around and create more photons by stimulated emission.
 
-Let me place a photon parallel and flash the pump once. To see the effect
+I'll put a few atoms in the cavity again and let me just place a photon parallel and flash the pump once. To see the amplification of photons.
 
 <img src="./07_cavity/cavity_gain_example/cavity_gain_example.gif"/>
 
-Did you see, at one instance the photon got amplified to 3 photons? We had a few problems -------
+Did you see, at one instance the photon got amplified to 3 photons? But it quickly got absorbed because the atoms wasn't excited.
 
-Let's flash with the pump continuously - between the first and the second flash, some electron will deexcite. But the atoms that are still excited at the second flash, will undergo stimulated emission. The photon form the pump, comes from a random direction, so the atoms will release two photons in a random direction.
+So let's flash with the pump continuously to excite the atoms - **but** atoms that are still excited when the pump flashes again, will undergo stimulated emission. The photon form the pump comes from a random direction - so the atoms will release two photons in a random direction. This is not something we want.
 
 <img src="./07_cavity/cavity_gain_example_flash/cavity_gain_example_flash.gif"/>
