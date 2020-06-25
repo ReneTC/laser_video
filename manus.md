@@ -77,6 +77,6 @@ I'll put a few atoms in the cavity again and let me just place a photon parallel
 
 Did you see, at one instance the photon got amplified to 3 photons? But it quickly got absorbed because the atoms wasn't excited.
 
-So let's flash with the pump continuously to excite the atoms - **but** atoms that are still excited when the pump flashes again, will undergo stimulated emission. The photon form the pump comes from a random direction - so the atoms will release two photons in a random direction. This is not something we want.
+So let's flash with the pump continuously to excite the atoms - **but** atoms that are still excited when the pump flashes again, will undergo stimulated emission. The photon form the pump comes from a random direction - so sadly the atoms will release two photons in a random direction - not something we want. Instead we want the atoms to stay excited and wait for a parallel photon to interact with. 
 
 <img src="./07_cavity/cavity_gain_example_flash/cavity_gain_example_flash.gif"/>
