@@ -64,7 +64,7 @@ def draw():
 
     no_excited = exc/np.size(atoms)
     fill(0)
-    Text(str(no_excited),(0,-350))
+    # Text(str(no_excited),(0,-350))
     # saver()
     if frame_count > frames:
         # to_gif()

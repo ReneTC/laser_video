@@ -65,6 +65,6 @@ def draw():
     if frame_count > frames:
         exit()
 
-# run()
+run()
 
 # to_gif()
