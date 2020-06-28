@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 220
+frames = 300
 
 def setup():
     size(width, height)
@@ -65,9 +65,9 @@ def draw():
     no_excited = exc/np.size(atoms)
     fill(0)
     # Text(str(no_excited),(0,-350))
-    # saver()
+    saver()
     if frame_count > frames:
-        # to_gif()
+        to_gif()
         exit()
 
 run(frame_rate=30)

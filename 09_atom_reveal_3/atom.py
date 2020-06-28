@@ -35,7 +35,7 @@ class Atom:
                 circle(center,self.n1)
             with push_matrix():
                 scale_in(100)
-                circle(center,780)
+                circle(center,850)
 
         fill('#dadada')
         push_matrix()
@@ -62,12 +62,10 @@ def draw():
     translate(width/2,height/2)
     background(255)
     scale(1,-1)
-    scale(1.2)
     atom.show()
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 run()
-
-# to_gif()

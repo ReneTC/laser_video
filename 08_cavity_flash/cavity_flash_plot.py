@@ -31,7 +31,7 @@ def draw():
     # flash and randomly excite
     # if frame_count%30 == 0:
         # strope.flash(atoms,photons)
-    if frame_count == 10:
+    if frame_count%30 == 0:
         strope.flash(atoms,photons)
 
     #show all atoms
@@ -79,4 +79,5 @@ def draw():
         # to_gif()
         exit()
 
-run(frame_rate=30)
+# run(frame_rate=30)
+to_gif()
