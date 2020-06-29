@@ -70,7 +70,7 @@ We are almost ready to produce a laser. Obviously there should be many more atom
 2. Wait for one of the atoms to send out a photon parallel to the mirrors.
 3.  Then the photon will bounce around and create more photons by stimulated emission.
 
-Let me show you the idea, by placing a photon parralel to the mirrors and excite some atoms with the pump:
+Let me show you the idea, by placing a photon parallel to the mirrors and excite some atoms with the pump:
 
 <img src="./07_cavity/cavity_gain_example/cavity_gain_example.gif"/>
 
@@ -85,15 +85,14 @@ So there is actually a huge problem with our setup. Can you see what it is? Let'
 
 <img src="./08_cavity_flash/cavity_flash/cavity_flash.gif"/>
 
-It looks quite confusing, but what I want to show is: no matter what we do, we can't have more than 50% of the atoms in our cavity excited. Because say we are at a point in time where 50% are excited, when the pump flashes it will simply invert the atoms: all the atoms that weren't excited will absorb a photon. And all atoms that was excited will be hit with the pump causing stimulated emission and the atom will end up in the unexcited state. Here is the same animation with a plot of the percerntage of atoms excited
+It looks quite confusing, but what I want to show is: no matter what we do, we can't have more than 50% of the atoms in our cavity excited. Because say we are at a point in time where 50% are excited, when the pump flashes it will simply invert the atoms: all the atoms that weren't excited will absorb a photon. And all atoms that was excited will be hit with the pump causing stimulated emission and the atom will end up in the unexcited state. Here is the same animation with a plot of the percentage of atoms excited
 
 
 <img src="./08_cavity_flash/cavity_flash_plot/cavity_flash_plot.gif"/>
 
-So we are guaranteed no matter what we do, the atoms in the cavity will always be under 50% excited. It's a problem because then the photons when interacting with an atom will have over 50% chance of getting absorbed, and under 50% chance of getting amplified by stimulated emission, and so this system actually absorbs the photons instead of amplifying them. So what can we do?
+So we are guaranteed no matter what we do, the atoms in the cavity will always be under 50% excited. It's a problem because then the photons when interacting with an atom will have over 50% chance of getting absorbed, and under 50% chance of getting amplified by stimulated emission, and so this system actually absorbs the photons instead of amplifying them. So what can we do? 
 
 ### 3 level atom
-
 Well the fix is actually simple! We find an atom with 3 energy system available:
 <img src="./09_atom_reveal_3/atom/atom.gif"/>
 
@@ -101,12 +100,26 @@ This atom has a higher energy state available, and could for example absorb the 
 
 <img src="./09_atom_reveal_3/correct_color_int/correct_color_int.gif"/>
 
-The example showed the atom absorbed a uv light, going from state 1->3. then release a blue photon from state 3->2. and again this red light from state 2->1 as we have seen before. This process is called a photoluminescence, which you have seen from UV parties.
+The example showed the atom absorbed a uv light, going from state 1->3. then release a blue photon from state 3->2. and again this red light from state 2->1 as we have seen before. This process is called a photoluminescence, which you might know from UV parties.
 
 <img src="uv.jpg">
 
-The room actually lighten up with UV rays, but our eyes can't see that frequency so the room appear dark. We can have a 3-level atom material that will absorb the uv light at state 3, then spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visble for our eyes, but 5.00 eV is not!
+The room is actually lighten up with UV rays, but our eyes can't see that frequency so the room appear dark. But if we have a 3-level atom material that will absorb the uv light at state 3, then spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible for our eyes, but 5.00 eV is not!
 
-Another thing that we need for our atom to work as a laser gain material is it needs to have a "meta stable state". It's a state, where the atom can't de-excite without any interference. The reason has to do with quantum mechanics, so let's just take it as a fact. We will need an atom that can spontaneously emit from state 3->2, but the state 2 is a meta stable state. So once the electron is in state 2 it can't fall down to state 1 by it self. This is called forbidden by the section rules, if you want to learn more.
+Another thing that we need for our atom to work as a laser gain material is it needs to have a "meta stable state". which is a state, where the atom can't deexcite without any interference. The reason has to do with quantum mechanics, so let's just take it as a fact. We will need an atom that can spontaneously emit from state 3->2, but the state 2 is a meta stable state. So once the electron is in state 2 it can't fall down to state 1 by it self. This is called forbidden by the section rules, if you want to learn more.
 
 <img src="./09_atom_reveal_3/meta_stable/meta_stable.gif"/>
+
+Furthermore, a good atom for a gain medium should have a short life-time in state 3 such that it will quickly de-excite to state 2.
+
+
+
+Alright let's use the other representation again for the atom. This is what can happen, shown with the smaller represents:
+- Absorption 1 -> 2
+- Absorption 2 -> 3
+- Absorption 1 -> 3
+- Stimulated emission 2 -> 1
+- Stimulated emission 3 -> 2
+- Stimulated emission 3 -> 1
+- spontaneously emssion 3 -> 2
+- spontaneously emssion 2 -> 1
