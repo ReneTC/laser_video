@@ -17,7 +17,7 @@ strope = Strope()
 def draw():
     exc = 0
     fps_counter()
-    translate(0,-50)
+    translate(0,-130)
     translate(width/2,height/2)
 
     background(255)
@@ -27,11 +27,7 @@ def draw():
     draw_box()
     strope.show()
 
-    if frame_count == 10:
-        strope.flash(atoms,photons)
-    if frame_count == 80:
-        strope.flash(atoms,photons)
-    if frame_count == 150:
+    if frame_count%30 == 0:
         strope.flash(atoms,photons)
 
     #show all atoms
@@ -54,22 +50,22 @@ def draw():
     for a in atoms:
         for p in photons:
             if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
-                if a.n0_occ == 1 and p.energy == 15:
+                if a.n0_occ == 1:
                     a.excite(p)
                     photons.remove(p)
                 elif a.n1_occ == 1:
-                    if p.energy == 20:
-                        a.excite(p)
-                        photons.remove(p)
-                    else:
+                    if p.energy == 15:
+                        a.stim_emis(p,photons)
+                elif a.n2_occ == 1:
+                    if p.energy == 35:
                         a.stim_emis(p,photons)
 
 
     # for all excited atoms randomly see if they should de-excite
     for a in atoms:
-        # if a.n1_occ == 1:
-        #     if random.randint(0,a.n1_ht) == 1:
-        #         a.de_excite_2_1(photons)
+        if a.n1_occ == 1:
+            if random.randint(0,a.n1_ht) == 1:
+                a.de_excite_2_1(photons)
         if a.n2_occ == 1:
             if random.randint(0,a.n2_ht) == 1:
                 a.de_excite_3_2(photons)
@@ -78,8 +74,13 @@ def draw():
     # plot
     no_excited = exc/np.size(atoms)*200
     excited_data[frame_count] = no_excited
-    translate(-350,-500)
+    translate(-700+16,-550)
 
+    fill(220,20,60,60)
+    rect((0,0),1400,100)
+    fill(60,179,113,60)
+    rect((0,100),1400,100)
+    fill(0)
     stroke_weight(5)
     plotter(excited_data)
 

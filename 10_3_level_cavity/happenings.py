@@ -1,6 +1,6 @@
 from pymin import *
 
-frames = 150
+frames = 100
 
 
 def setup():
@@ -10,33 +10,49 @@ atoms = []
 photons = []
 
 a11 = Atom3((-730,300))
+p11 = Photon(Vector(-730-490/2,300),Vector(1,0),15)
+photons.append(p11)
 atoms.append(a11)
 
 
 a21 = Atom3((-730+490,300))
+p21 = Photon(Vector(-730+490/2,300),Vector(1,0),35)
+photons.append(p21)
 atoms.append(a21)
 
 
 a31 = Atom3((-730+2*490,300))
+a31.n0_occ = 0
+a31.n2_occ = 1
 atoms.append(a31)
 
 
 a41 = Atom3((-730+3*490,300))
+a41.n0_occ = 0
+a41.n1_occ = 1
 atoms.append(a41)
 
 # - - - - - - - -
 a12 = Atom3((-730,-390+180))
+a12.n0_occ = 0
+a12.n1_occ = 1
 atoms.append(a12)
+p12 = Photon(Vector(-730-490/2,-390+180),Vector(1,0),15)
+photons.append(p12)
 
 a22 = Atom3((-730+490,-390+180))
+a22.n0_occ = 0
+a22.n2_occ = 1
 atoms.append(a22)
+p22 = Photon(Vector(-730+490/2,-390+180),Vector(1,0),35)
+photons.append(p22)
 
-a32 = Atom3((-730+2*490,-390+180))
-atoms.append(a32)
-
-a42 = Atom3((-730+3*490,-390+180))
-atoms.append(a42)
-def sq(col,txt):
+# a32 = Atom3((-730+2*490,-390+180))
+# atoms.append(a32)
+#
+# a42 = Atom3((-730+3*490,-390+180))
+# atoms.append(a42)
+def sq(col):
     fill(0)
 
     fill(col)
@@ -50,38 +66,70 @@ def draw():
 
     with push_matrix():
         translate(0,0)
-        sq(240,"lol")
+        sq(240)
         translate(width/4,0)
-        sq(255,"lol")
+        sq(255)
         translate(width/4,0)
-        sq(240,"lol")
+        sq(240)
         translate(width/4,0)
-        sq(255,"lol")
+        sq(255)
     with push_matrix():
         translate(0,-536)
-        sq(255,"lol")
+        sq(255)
         translate(width/4,0)
-        sq(240,"lol")
-        translate(width/4,0)
-        sq(255,"lol")
-        translate(width/4,0)
-        sq(240,"lol")
+        sq(240)
+        # translate(width/4,0)
+        # sq(255)
+        # translate(width/4,0)
+        # sq(240)
 
     fill(0)
     stroke(0)
-    Text("The cake is a lie",(-730,100),size =50)
-    Text("cake",(-730,-390),size =50)
-    Text("lol wut",(-730+490,100),size =50)
-    Text("hej",(-730+490,-390),size =50)
-    Text("Hvad så der",(-730+2*490,100),size =50)
-    Text("ej hvad",(-730+2*490,-390),size =50)
-    Text("god aften far",(-730+3*490,100),size =50)
-    Text("ko",(-730+3*490,-390),size =50)
+    Text("1 -> 2 Absorption",(-730,100),size =30)
+    Text("1 -> 3 Absorption",(-730+490,100),size =30)
+    Text("Radiationless transition",(-730+2*490,120),size =30)
+    Text("(very fast)",(-730+2*490,80),size =30)
+    Text("Meta stable",(-730+3*490,120),size =30)
+    Text("(spontaneous emssion rare)",(-730+3*490,80),size =30)
+    Text("1 -> 2 Stimulated emission",(-730,-390),size =30)
+    Text("1 -> 3 Stimulated emission",(-730+490,-390),size =30)
+    # Text("...",(-730+2*490,-390),size =30)
+    # Text("...",(-730+3*490,-390),size =30)
 
 
     for a in atoms:
         a.show()
+    for p in photons:
+        p.show()
+
+    # listen for photn atom intercation
+    for a in atoms:
+        for p in photons:
+            if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
+                if a.n0_occ == 1:
+                    a.excite(p)
+                    photons.remove(p)
+                elif a.n1_occ == 1:
+                    if p.energy == 15:
+                        a.stim_emis(p,photons)
+                elif a.n2_occ == 1:
+                    if p.energy == 35:
+                        a.stim_emis(p,photons)
+
+    if frame_count == 10:
+        a31.n1_occ = 1
+        a31.n2_occ = 0
+    if frame_count == 50:
+        a41.de_excite_2_1(photons)
+    with push_style():
+        alpha_out(0,color=(255,255,255))
+        square((0,0),2000, mode='CENTER')
+    with push_style():
+        alpha_in(80,color=(255,255,255))
+        square((0,0),2000, mode='CENTER')
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 run()
