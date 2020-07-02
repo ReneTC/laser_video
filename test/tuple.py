@@ -1,21 +1,13 @@
-from p5 import *
+import numpy as np
+import random
 
-def setup():
-    size(640, 360)
-    no_stroke()
-    background(204)
+no_dir = 17
+directions = np.linspace(0,360,no_dir)
 
-def draw():
-    if mouse_is_pressed:
-        fill(random_uniform(255), random_uniform(127), random_uniform(51), 127)
-    else:
-        fill(255, 15)
+ran_no = random.randint(0,no_dir-1)
+ran_angle = np.radians(directions[ran_no])
+ran_angle = np.pi/2
+ran_x = np.sin(ran_angle)
+ran_y = np.cos(ran_angle)
 
-    circle_size = random_uniform(low=10, high=80)
-
-    circle((mouse_x, mouse_y), circle_size)
-
-def key_pressed(event):
-    background(204)
-
-run()
+print(ran_x,ran_y)

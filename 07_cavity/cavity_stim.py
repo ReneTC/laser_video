@@ -26,12 +26,9 @@ def draw():
 
 
     # flash and randomly excite
-    if frame_count == 30:
+    if frame_count%20 == 0:
         strope.flash(atoms,photons)
     # flash and randomly excite
-    if frame_count == 15:
-        strope.flash(atoms,photons)
-
     #show all atoms
     for a in atoms:
         a.show()
@@ -47,15 +44,25 @@ def draw():
 
 
 
+    # listen for photn atom intercation
+    for a in atoms:
+        for p in photons:
+            if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
+                if a.n0_occ == 1:
+                    photons.remove(p)
+                    a.excite()
+                elif a.n1_occ == 1:
+                    a.stim_emis(p,photons)
+
     # for all excited atoms randomly see if they should de-excite
     for a in atoms:
         if a.n1_occ == 1:
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-    saver()
+    # saver()
     if frame_count > frames:
-        to_gif()
+        # to_gif()
         exit()
 
 run(frame_rate=30)

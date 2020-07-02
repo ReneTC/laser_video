@@ -7,7 +7,7 @@ def setup():
     size(width, height)
 
 atoms = []
-phot1 = Photon(Vector(280,0),Vector(-1,0),15)
+phot1 = Photon(Vector(320,0),Vector(-1,0),15)
 photons = [phot1]
 for i in range(0,5):
     atoms.append(Atom((-650+i*140,0)))

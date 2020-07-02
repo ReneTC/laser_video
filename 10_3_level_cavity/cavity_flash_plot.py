@@ -27,7 +27,7 @@ def draw():
     draw_box()
     strope.show()
 
-    if frame_count%30 == 0:
+    if frame_count%20 == 0:
         strope.flash(atoms,photons)
 
     #show all atoms
@@ -72,7 +72,7 @@ def draw():
 
 
     # plot
-    no_excited = exc/np.size(atoms)*200
+    no_excited = exc/np.size(atoms)*220
     excited_data[frame_count] = no_excited
     translate(-700+16,-550)
 
@@ -87,7 +87,7 @@ def draw():
 
     # saver()
     if frame_count > frames:
-        # to_gif()
         exit()
 
-run(frame_rate=30)
+# run(frame_rate=30)
+to_gif()

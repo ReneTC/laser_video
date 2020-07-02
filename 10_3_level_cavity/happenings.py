@@ -129,7 +129,7 @@ def draw():
         square((0,0),2000, mode='CENTER')
     saver()
     if frame_count > frames:
-        to_gif()
         exit()
 
-run()
+# run()
+to_gif()

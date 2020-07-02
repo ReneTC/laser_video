@@ -69,9 +69,9 @@ def draw():
                 a.de_excite_3_2(photons)
 
 
-    saver()
+    # saver()
     if frame_count > frames:
-        # to_gif()
         exit()
 
-run(frame_rate=30)
+# to_gif()
+# run(frame_rate=30)

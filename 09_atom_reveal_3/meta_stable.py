@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 130
+frames = 250
 class Atom:
     def __init__(self):
         self.pos = Vector(0,0)
@@ -39,7 +39,7 @@ class Atom:
         # energy levels circles
         with push_style():
             stroke_weight(5)
-            stroke(0)
+            stroke(200)
             fill(0,0,0,0)
             with push_matrix():
                 circle(center,self.n0*2)
@@ -131,7 +131,7 @@ class Atom:
         ran_y = random.randint(-100,100)
 
         new_pos = Vector(ran_x,ran_y).normalize()*100+self.n0_pos/2+self.n2_pos/2
-        photons.append(Photon(new_pos,Vector(ran_x,ran_y),self.n2 - self.n1 ))
+        # photons.append(Photon(new_pos,Vector(ran_x,ran_y),self.n2 - self.n1 ))
 
 
 
@@ -172,8 +172,11 @@ def setup():
 atom = Atom()
 atoms = [atom]
 phot = Photon(Vector(-800,200),Vector(1,0),225)
-photons = [phot]
-
+phot2 = Photon(Vector(-2500,300),Vector(1,0),100)
+photons = [phot,phot2]
+phot3 = Photon(Vector(0,310),Vector(1,0),100)
+phot4 = Photon(Vector(0,300-10),Vector(1,0),100)
+photons2 = [phot3,phot4]
 def draw():
     translate(width/2,height/2)
     background(255)
@@ -201,20 +204,34 @@ def draw():
                 a.de_excite_n2()
 
     with push_style():
-        alpha_in_out(0,70,color=(60,179,113))
-        arrow(Vector(20,200),Vector(20,410))
-        arrow(Vector(-20,420),Vector(-20,310))
-        Text("Allowed transition",(160,300))
-        Text("Allowed transition",(-160,400))
+        alpha_in_out(0,40,color=(0,0,0))
+        arrow(Vector(0,200),Vector(0,410))
+        Text("Absorption from pump",(200,330),font="b")
     with push_style():
-        alpha_in_out(70,200,color=(220,20,60))
-        arrow(Vector(-20,300),Vector(-20,210))
+        alpha_in_out(40,110,color=(0,0,0))
+        arrow(Vector(0,420),Vector(0,310))
+        Text("Fast radiatonless transition",(-240,370),font="b")
+    with push_style():
+        alpha_in_out(110,170,color=(0,0,0))
+        arrow(Vector(0,300),Vector(0,210))
         Text("Meta stabile state",(160,340))
-        Text("Forbidden transition",(-180,270))
+        Text("Very long life time",(-220,270),font="b")
+    a = 30
+    with push_style():
+        alpha_in_out(110,170,color=(0,0,0))
+        Text("Wait for stimualted emis",(-220,270-a))
+    fill(0)
+    if frame_count > 165:
+        atom.n1_occ = 0
+        atom.n0_occ = 1
+
+
+        for p in photons2:
+            p.show()
+
     saver()
     if frame_count > frames:
         to_gif()
         exit()
-
 
 run(frame_rate=30)
