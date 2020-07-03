@@ -161,9 +161,9 @@ I skipped a few important concepts for the laser. Most importantly: how we get c
 
 I also didn't talk about other different kinds of lasers - like how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
 
-Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.
+*Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.*
 
-Happy lasing!
+*Happy lasing!*
 
 <img src="./cat.jpg"/>
 
