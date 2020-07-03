@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 130
+frames = 140
 class Atom2:
     def __init__(self):
         self.pos = Vector(0,0)
@@ -110,7 +110,7 @@ class Photon2:
         self.created = frame_count
 
     def show(self):
-        velocity = 15
+        velocity = 6
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -134,20 +134,26 @@ def setup():
 
 
 atom = Atom2()
-atom2 = Atom((600,0))
+atom2 = Atom((900,0))
 atoms = [atom,atom2]
-phot = Photon2(Vector(-400,200),Vector(1,0),100)
-phot1 = Photon2(Vector(-700,300),Vector(1,0),100)
+phot = Photon2(Vector(-400+200,200),Vector(1,0),100)
+phot1 = Photon2(Vector(-700+230,300),Vector(1,0),100)
 
-phot2 = Photon(Vector(1000,0),Vector(-1,0),15)
-phot3 = Photon(Vector(1200,0),Vector(-1,0),15)
+phot2 = Photon(Vector(1100,0),Vector(-1,0),15)
+phot3 = Photon(Vector(1300,0),Vector(-1,0),15)
 photons = [phot,phot1,phot2,phot3]
 
 def draw():
     translate(width/2,height/2)
-    translate(-300,0)
+    translate(-500,0)
     background(255)
     scale(1,-1)
+    scale(1.2)
+
+    no_stroke()
+    fill(240)
+    rect((width/2-500, height/2), width/2, -4*height)
+    fill(0)
 
     #show atoms
     for a in atoms:
@@ -160,7 +166,7 @@ def draw():
     # listen for photon in atom (should be all atoms i ground state)
     for a in atoms:
         for p in photons:
-            if a.interaction(p):
+            if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
                 if a.n0_occ == 1:
                     photons.remove(p)
                     a.excite()
@@ -172,11 +178,17 @@ def draw():
     #     if a.n1_occ == 1:
     #         if random.randint(0,a.n1_ht) == 1:
     #             a.de_excite()
-    # saver()
+    saver()
+    with push_style():
+        alpha_out(0,color=(255,255,255))
+        square((0,0),20000, mode='CENTER')
+    with push_style():
+        alpha_in(120,color=(255,255,255))
+        square((0,0),20000, mode='CENTER')
     if frame_count > frames:
+        to_gif()
         exit()
 
 
 
-to_gif()
-# run(frame_rate=30)
+run(frame_rate=30)

@@ -79,7 +79,7 @@ Let me show you the idea, by placing a photon parallel to the mirrors and excite
 
 Did you see, at one instance the photon got amplified to 3 photons? But it quickly got absorbed because the atoms wasn't excited.
 
-So let's flash with the pump continuously to excite the atoms, it seems like we fixed the problem **but** we intrude a new problem: atoms that are still excited when the pump flashes again, will undergo stimulated emission with light from the pump. The photon from the pump comes from a random direction - so sadly the atoms will release two photons in a random direction - not something we want.
+So let's flash with the pump continuously to excite the atoms, it seems like we fixed the problem *but* we intrude a new problem: atoms that are still excited when the pump flashes again, will undergo stimulated emission with light from the pump. The photon from the pump comes from a random direction - so sadly the atoms will release two photons in a random direction - not something we want.
 
 <img src="./07_cavity/cavity_gain_example_flash/cavity_gain_example_flash.gif"/>
 
@@ -94,7 +94,7 @@ It looks quite confusing, but what I want to show is: no matter what we do, we c
 
 <img src="./08_cavity_flash/cavity_flash_plot/cavity_flash_plot.gif"/>
 
-So we are guaranteed no matter what we do, the atoms in the cavity will always be under 50% excited. **It's a huge problem** because then the photons when interacting with an atom will have over 50% chance of getting absorbed, and under 50% chance of getting amplified by stimulated emission, and so this system actually eats the photons more than amplifying them. When more than 50% of the atoms are excited we call that *population inversion*, we need that in order to obtain optical gain -  So what can we do?
+So we are guaranteed no matter what we do, the atoms in the cavity will always be under 50% excited. *It's a huge problem* because then the photons when interacting with an atom will have over 50% chance of getting absorbed, and under 50% chance of getting amplified by stimulated emission, and so this system actually eats the photons more than amplifying them. When more than 50% of the atoms are excited we call that **population inversion**, we need that in order to obtain optical gain -  So what can we do?
 
 ### 3 level atom
 Well the fix is actually simple! We find an atom with 3 energy system available:
@@ -111,7 +111,7 @@ The example showed the atom absorbed a uv light, going from state 1->3. then rel
 The room is actually lighten up with UV rays, but our eyes can't see that frequency so the room appear dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible for our eyes, but 5.00 eV is not!
 
 
-let me quickly mention one last mechanism of the atom or molecule state: You can also have radiationless transitions, where the electron quantum jumps to another state without sending out an atom. Of course the energy has to go somewhere, when it doesn't go to a photon. It could go to kinetic energy, by collision between the atoms, an auger processes, where other electrons gets the energy, or by vibrational-rotational relaxation.
+let me quickly mention one last mechanism of the atom or molecule state: You can also have **radiationless transitions**, where the electron quantum jumps to another state without sending out an atom. Of course the energy has to go somewhere, when it doesn't go to a photon. It could go to kinetic energy, by collision between the atoms, an auger processes, where other electrons gets the energy, or by vibrational-rotational relaxation.
 We won't care about the actual processes, but it's beneficial for the population inversion if we use an atom that can go to from state 3 to 2 in a radiationless transition.
 
 We will also like the atom to have a few other features:

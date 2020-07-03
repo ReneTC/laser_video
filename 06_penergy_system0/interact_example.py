@@ -136,7 +136,7 @@ atom = Atom2()
 new_atom = Atom((450,0))
 atoms = [atom,new_atom]
 phot2 = Photon2(Vector(-990,200),Vector(1,0),100)
-phot1 = Photon(Vector(890,0),Vector(-1,0),15)
+phot1 = Photon(Vector(1000,0),Vector(-1,0),15)
 photons = [phot2,phot1]
 
 def draw():
