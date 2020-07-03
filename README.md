@@ -83,7 +83,7 @@ So let's flash with the pump continuously to excite the atoms, it seems like we 
 
 <img src="./07_cavity/cavity_gain_example_flash/cavity_gain_example_flash.gif"/>
 
-we don't want that! *Instead we want the atoms to stay excited and wait for a parallel photon to interact with.*
+*Instead we want the atoms to stay excited and wait for a parallel photon to interact with.*
 So there is actually a huge problem with our setup. Can you see what it is? Let's me put in some more atoms and see what happens when we keep flashing:
 
 <img src="./08_cavity_flash/cavity_flash/cavity_flash.gif"/>
