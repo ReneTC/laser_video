@@ -29,7 +29,7 @@ here is an example: a photon of incorrect energy 5.00 eV a UV violet photon, fli
 
 <img src="stars.jpg"/>
 
-The atoms in the plastic have been shined upon by white light before dark - of course, white light has all visible colors. Some green light then got absorbed by the atom via absorption. The excited state for this specific atom has a very long life-time - we call this a **meta-stable state** - the actual reason why the state has a long life-time has to do with quantum mechanics, specifically the selection rules. So after some long time, the electron undergoes spontaneous emission hours later at night! This process is called phosphorescence.
+The atoms in the plastic have been shined upon by white light before dark - of course, white light has all visible colors. Some green light then got absorbed by the atom via absorption. The excited state for this specific atom has a very long life-time - we call this a **meta-stable state** - the actual reason why the state has a long life-time has to do with quantum mechanics, specifically the **selection rules**. So after some long time, the electron undergoes spontaneous emission hours later at night! This process is called **phosphorescence**.
 
 <img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
 
@@ -54,9 +54,9 @@ Of course, we can also represent stimulated emission with the new representation
 
 ### Optical Cavity
 
-To exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrors they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity, there will be what's called a "gain medium". It's some material that can do this stimulated emission for us. Real-world example could be a synthetic ruby crystal or Helium-Neon gas.
+To exploit the stimulated emission processes, let's make an **optical cavity**. It's a cylinder, with mirrors on the sides. When photons hit the mirrors they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity, there will be what's called a **gain medium**. It's some material that can do this stimulated emission for us. Real-world example could be a synthetic ruby crystal or Helium-Neon gas.
 
-The optical cavity will also have an optical pump -  all around the optical cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
+The optical cavity will also have an **optical pump** -  all around the optical cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
 <img src="./07_cavity/cavity/cavity.gif"/>
 
@@ -106,7 +106,7 @@ This atom has a higher energy state available, and could for example absorb the 
 
 <img src="./09_atom_reveal_3/correct_color_int/correct_color_int.gif"/>
 
-The example showed the atom absorbed a uv light, going from state 1->3. then release a blue photon from state 3->2. and again this red light from state 2->1 as we have seen before. This process is called photoluminescence, which you might know from UV parties.
+The example showed the atom absorbed a uv light, going from state 1->3. then release a blue photon from state 3->2. and again this red light from state 2->1 as we have seen before. This process is called **photoluminescence**, which you might know from UV parties.
 
 <img src="uv.jpg">
 
@@ -149,7 +149,7 @@ I won't show different reflecting mirrors, but I will let the simulation run for
 
 <a href="http://www.youtube.com/watch?v=FssXv8QR7wU"><img src="./LASER00000.png"></a>
 
-You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase, and polarization is 100% the same! So this triangle representation of photons isn't that clear how nice the light is we get out. If I use the old wave representation for the photon it shows how nice the light is:
+You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase, and polarization is 100% the same! So this triangle representation of photons isn't that clear how nice the light is we get out. If I use the old wave representation for the photon it shows how nice aligned the light is:
 
 <img src="./11_photons/light/light.gif"/>
 
