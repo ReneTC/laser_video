@@ -1,32 +1,34 @@
 # The physics of a laser
-The laser is one of the most important tools advances in science. I mean, it's one of the most important tools to tease cats.
+The laser is one of the most important tools for ~~current advances in science~~  teasing cats.
 
 
 <img src="https://media1.tenor.com/images/2f0877e3615e63d0bf78a00cdf8d2273/tenor.gif?itemid=3454835"/>
 
-In this video, I'll show you the physics of lasers, and simulate a working laser as well.
-
-Consider helping me create more free physics material, by supporting with whatever you want on Patreon.
+In this article, I'll show some properties of the the atom and how the atom interacts with light. I'll then use that knowledge to simulate a working laser.
 
 ### Light and atom interaction
-The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. The atom as a nucleus as well.
+The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. Off course with a nucleus in the center.
 
 <img src="./00_atom_reveal/atom/atom.gif"/>
 
-Off course the picture of this atom is completely wrong, but it gets the physics right, because the distance here represent energy levels. The picture also get the physics right because the orbits or the circles represents states for the electron. The electron can ONLY exists where there is a state. To switch state the electron will do a quantum jump: that is, teleport to another state. But to teleport requires some energy. One way to get that is if the electron absorbs a photon. That's called **Stimulated Absorption**. Once the electron is then in a excited state, it will fall down after some random time depending on the half life of that state. The processes is called **Spontaneous Emission**, and it releases a photon in a random direction in this processes.
+The picture of the atom is completely wrong, but it gets the physics right, because the distance here represent energy levels. The picture also get the physics right because the orbits or the circles represents states for the electron.
+
+As you know electrons can ONLY exists where there is a state. To switch state the electron will do a quantum jump: that is, teleport to another state. But to teleport requires some energy. One way to get that is if the electron absorbs a photon. That's called **Stimulated Absorption**. Once the electron is then in a excited state, it will fall down after some random time depending on the half life of that state. The processes is called **Spontaneous Emission**, and it releases a photon in a random direction in this processes.
 <img src="./01_atom_interaction/interaction/interaction.gif"/>
 
-Any photon that interacts with the electron wont excite it. To excite the electron, to photon have to have the exact same energy as the energy difference between the two states. One example could be a excitation energy of 2.00 electron volts. The energy of a photon is perceived as color in our eyes - and 2.00 eV corresponds to red.
+Any photon that interacts with the electron wont necessarily excite it. To excite the electron, the photon have to have the exact same energy as the energy difference between the two states. One example could be a excitation energy of 2.00 electron volts. The energy of a photon is perceived as color in our eyes - and 2.00 eV corresponds to red.
+
 <img src="./02_correct_color/correct_color/correct_color.gif"/>
 
-here is an example: a photon of incorrect energy 5.00 eV a violet color, flies into the electron. Nothing happens. A photon with 2 eV then flies into the electron and excites the electron. After some random time, the electron deexcites and sends out a 2 eV photon in a random direction.
+here is an example: a photon of incorrect energy 5.00 eV an UV violet photon, flies into the electron. Nothing happens. A photon with 2.00 eV then flies into the electron and excites the electron. After some random time, the electron deexcites and sends out a 2 eV photon in a random direction.
+
 <img src="./03_correct_color_interact/correct_color_int/correct_color_int.gif"/>
 
-Did you have have these self glowing stars as a kid? How did it work?
+*Side note - did you have have these self glowing stars as a kid? How did it work?* We can use our new knowledge to explain that.
 
 <img src="stars.jpg"/>
 
-The atoms in the plastic have been shined upon by white light before dark - off course white light have all visible colors. Some green light then got absorbed by the atom via stimulated emission. The excited state for this specific atom have a very long life-time - we call this a meta-stable state, because it is forbidden by the selection rules - the actual reason has to do with quantum mechanics. Therefore the electron undergoes spontaneous emission hours later at night! This processes is called phosphorescence.
+The atoms in the plastic have been shined upon by white light before dark - off course white light have all visible colors. Some green light then got absorbed by the atom via stimulated emission. The excited state for this specific atom have a very long life-time - we call this a meta-stable state, because it is forbidden by the selection rules - the actual reason has to do with quantum mechanics. After some long time the electron undergoes spontaneous emission hours later at night! This processes is called phosphorescence.
 
 <img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
 
@@ -41,7 +43,7 @@ Because the frequency is the same, the color or energy is the same for the two p
 
 **L. A. S. E. R** stands for Light amplification by *stimulated emission* of radiation. So lasers works by exploiting that interaction. Let me show you how.
 
-But first, I'll need to show many atoms later so let me simplify and resize the representation of the atom and the photon.  I'll show the photon as a small arrow and the atom is a grey circle. The atom is red when it has an excited electron in the 2.00 eV state.
+But first, I'll need to show many atoms clumped together so let me simplify and resize the representation of the atom and the photon.  I'll show the photon as a small arrow and the atom as a grey circle. The atom is red when it has an excited electron in the 2.00 eV state.
 
 <img src="./06_penergy_system0/interact_example/interact_example.gif"/>
 
@@ -51,7 +53,7 @@ Off course we can also represent stimulated emission with the new representation
 
 ### Optical Cavity
 
-the exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrors they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity there will be what's called a "gain medium". It's some material that can do this stimulated emission for us - real world example could be a synthetic ruby crystal or Helium Neon gas.
+To exploit the stimulated emission processes, let's make an optical cavity. It's a cylinder, with mirrors on the sides. When photons hit the mirrors they will change direction, but when they hit the other wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity there will be what's called a "gain medium". It's some material that can do this stimulated emission for us - real world example could be a synthetic ruby crystal or Helium Neon gas.
 
 The optical cavity will also have a optical pump -  all around the optical cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
@@ -60,6 +62,7 @@ The optical cavity will also have a optical pump -  all around the optical cavit
 The pump can be tuned to send out the energy in the 2.00 eV red range - the energy needed to excite our atoms.
 
 <img src="./07_cavity/cavity_abs_flash/cavity_abs_flash.gif"/>
+
 That looks way too confusing..  So let's make a rule: Instead of drawing photons everywhere, since the radiation pressure from the pump is strong, each time the pump flashes, all atoms have a 50% chance of getting hit by a photon.  I'll put a few atoms in the cavity to show you. The pump flashes once, exciting all the atoms with 50% chance in the cavity. The atoms will then randomly spontaneously deexcite and send out a 2.00 eV photon.
 
 <img src="./07_cavity/cavity_abs/cavity_abs.gif"/>
@@ -147,9 +150,12 @@ You can see a huge number of photons builds up! And these photons are from stimu
 
 <img src="./11_photons/light/light.gif"/>
 
+In a real laser, Photons will bounce around the mirror a billion times pr second, and there would be billions of atoms in there as well.
+
 ### That's all for lasers or what?
 
-I skipped a few important concepts for the laser. How we get coherent light with optical resonance, by producing a standing wave in the cavity. And how nice a 4 level system is.
+I skipped a few important concepts for the laser. Most importantly :how we get coherent light with optical resonance, by producing a standing wave in the cavity. Another thing I skipped is how nice a 4 level system is.
+
 I also didn't talk about other different kinds of lasers - like how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid state, gas, dye, or semiconductor lasers.
 
 Cool physics, infinite scientific uses and the best cat toy makes lasers one of the most important discoveries.
