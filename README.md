@@ -144,7 +144,7 @@ To make a working laser, we just need to run the laser for some more time. And t
 
 I wont show different reflectiong mirror, but I will let the simulation run for some time, so you can see how the optical laser builds up a hugher number of coherent photoons. (Click the image below or [this link](https://www.youtube.com/watch?v=FssXv8QR7wU) to see the video, it was too long of a gif).
 
-[![working laser simulation](./10_3_level_cavity/LASER0/LASER00000.png)](https://www.youtube.com/watch?v=FssXv8QR7wU)
+[<img src="./10_3_level_cavity/LASER0/LASER00000.png">](http://www.youtube.com/watch?v=FssXv8QR7wU)
 
 You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase and polarization is 100% the same! So these triangle representation of photons isn't that clear how nice the light is we get out. If use the old wave representation for the photon it shows how nice the light is:
 
