@@ -120,27 +120,40 @@ This is the overall interaction we are interested in in the cavity:
 <img src="./09_atom_reveal_3/meta_stable/meta_stable.gif"/>
 
 
-Alright let's use the other representation again for the atom. These are all the interaction that can happen
+Alright let's use the other representation again for the atom. These are all the 6 different interaction that can happen
 
 <img src="./10_3_level_cavity/happenings/happenings.gif"/>
 
-run with new 3 level atoms
+Let's put our 3 level atom in the cavity. The flash energy will now be set to 5.00 eV. So each time the flash flashes, all atoms have a 50% of being hit as before. If the atom is hit 3 things can happen depnding on the state the atom is in:
+- If the atom is in ground state (state 1), it will be excitd to state 3.
+- If the atom is in state 2, the 5.00 eV doesn't match any eneryg levels and so nothing will happen.
+- If the atom is in state 3, stimulated emssion will occur.
+
+Alright let's run the system.
 
 <img src="./10_3_level_cavity/cavity_flash_plot/cavity_flash_plot.gif"/>
 
-just run for long time:
+Since state 3 will quickly fall down to a much more stable state 2, over 50% of the atoms can easily be excited. The flash now doesn't de-excited the atoms in state 2 because the energy is 5.00 eV.
 
-<img src="./10_3_level_cavity/LASER/LASER.gif"/>
+Now since over 50% are excited, photons will have a higher chance of getting amplified by stimulated emission, instead of getting eaten by absorption.
 
-It worked!
+To make a working laser, we just need to run the laser for some more time. And to get light out, we let one mirror reflect photons 90% such that 10% of the generated radiation can be emitted out of the laser cavity. The mirror is called the output coupler, while the other 100% reflecting mirror is called high reflector.
 
-### that's all for lasers or what?
+I wont show different reflectiong mirror, but I will let the simulation run for some time, so you can see how the optical laser builds up a hugher number of coherent photoons. (Click the image below or [this link](https://www.youtube.com/watch?v=FssXv8QR7wU) to see the video, it was too long of a gif).
 
-Didn't talk about:
-- optical cavity modes, resulting in a coherent wave.
-- the benefits of a 4 level system.
+[![Logn working laser simulation](./10_3_level_cavity/LASER0/LASER00000.png)](https://www.youtube.com/watch?v=FssXv8QR7wU)
 
-different kinds of laser
-How other laser systems can use different pumping mechanism..
+You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase and polarization is 100% the same! So these triangle representation of photons isn't that clear how nice the light is we get out. If use the old wave representation for the photon it shows how nice the light is:
+
+<img src="./11_photons/light/light.gif"/>
+
+### That's all for lasers or what?
+
+I skipped a few important concepts for the laser. How we get coherent light with optical resonance, by producing a standing wave in the cavity. And how nice a 4 level system is.
+I also didn't talk about other different kinds of lasers - like how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid state, gas, dye, or semiconductor lasers.
+
+Cool physics, infinite scientific uses and the best cat toy makes lasers one of the most important discoveries.
 
 Happy lasing!
+
+<img src="./cat.jpg"/>
