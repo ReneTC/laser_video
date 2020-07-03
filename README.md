@@ -7,7 +7,7 @@ The laser is one of the most important tools for ~~current advances in science~~
 In this article, I'll show some properties of the the atom and how the atom interacts with light. I'll then use that knowledge to simulate a working laser.
 
 ### Light and atom interaction
-The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. Off course with a nucleus in the center.
+The whole processes of lasing relies on a special mechanic between the atom and the light. So let's examine an atom. For simplicity lets look at an atom with only one electron. And two states shown by the two electron orbitals. Of course with a nucleus in the center.
 
 <img src="./00_atom_reveal/atom/atom.gif"/>
 
@@ -28,7 +28,7 @@ here is an example: a photon of incorrect energy 5.00 eV an UV violet photon, fl
 
 <img src="stars.jpg"/>
 
-The atoms in the plastic have been shined upon by white light before dark - off course white light have all visible colors. Some green light then got absorbed by the atom via stimulated emission. The excited state for this specific atom have a very long life-time - we call this a meta-stable state, because it is forbidden by the selection rules - the actual reason has to do with quantum mechanics. After some long time the electron undergoes spontaneous emission hours later at night! This processes is called phosphorescence.
+The atoms in the plastic have been shined upon by white light before dark - of course white light have all visible colors. Some green light then got absorbed by the atom via absorption. The excited state for this specific atom have a very long life-time - we call this a **meta-stable state** - the actual reason why it have a log life-time has to do with quantum mechanics, specifically the selection rules. So after some long time the electron undergoes spontaneous emission hours later at night! This processes is called phosphorescence.
 
 <img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
 
@@ -47,7 +47,7 @@ But first, I'll need to show many atoms clumped together so let me simplify and 
 
 <img src="./06_penergy_system0/interact_example/interact_example.gif"/>
 
-Off course we can also represent stimulated emission with the new representation
+Of course we can also represent stimulated emission with the new representation
 
 <img src="./06_penergy_system0/stim_em2/stim_em2.gif"/>
 
@@ -111,7 +111,7 @@ The example showed the atom absorbed a uv light, going from state 1->3. then rel
 The room is actually lighten up with UV rays, but our eyes can't see that frequency so the room appear dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible for our eyes, but 5.00 eV is not!
 
 
-let me quickly mention one last mechanism of the atom or molecule state: You can also have radiationless transitions, where the electron quantum jumps to another state without sending out an atom. Off course the energy has to go somewhere, when it doesn't go to a photon. It could go to kinetic energy, by collision between the atoms, an auger processes, where other electrons gets the energy, or by vibrational-rotational relaxation.
+let me quickly mention one last mechanism of the atom or molecule state: You can also have radiationless transitions, where the electron quantum jumps to another state without sending out an atom. Of course the energy has to go somewhere, when it doesn't go to a photon. It could go to kinetic energy, by collision between the atoms, an auger processes, where other electrons gets the energy, or by vibrational-rotational relaxation.
 We won't care about the actual processes, but it's beneficial for the population inversion if we use an atom that can go to from state 3 to 2 in a radiationless transition.
 
 We will also like the atom to have a few other features:
@@ -163,3 +163,6 @@ Cool physics, infinite scientific uses and the best cat toy makes lasers one of 
 Happy lasing!
 
 <img src="./cat.jpg"/>
+
+
+### Thank you

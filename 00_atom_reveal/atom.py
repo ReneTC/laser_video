@@ -1,6 +1,6 @@
 from pymin import *
 
-frames = 100
+frames = 140
 
 class Atom:
     def __init__(self):
@@ -57,14 +57,14 @@ atom = Atom()
 
 def draw():
     translate(width/2,height/2)
+    translate(interpolate(0,width,120),0)
     background(255)
     scale(1,-1)
     scale(1.2)
     atom.show()
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 run()
-
-# to_gif()

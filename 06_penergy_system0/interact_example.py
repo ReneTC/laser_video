@@ -1,10 +1,10 @@
 from pymin import *
 import random
 
-frames = 130
+frames = 200
 class Atom2:
     def __init__(self):
-        self.pos = Vector(-300,0)
+        self.pos = Vector(-400,0)
         self.excited = 0
 
         self.n0 = 200
@@ -109,7 +109,7 @@ class Photon2:
         self.created = frame_count
 
     def show(self):
-        velocity = 15
+        velocity = 6
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -133,7 +133,7 @@ def setup():
 
 
 atom = Atom2()
-new_atom = Atom((400,0))
+new_atom = Atom((450,0))
 atoms = [atom,new_atom]
 phot2 = Photon2(Vector(-990,200),Vector(1,0),100)
 phot1 = Photon(Vector(890,0),Vector(-1,0),15)
@@ -144,6 +144,13 @@ def draw():
     background(255)
     scale(1,-1)
     scale(1.2)
+
+    no_stroke()
+    fill(240)
+    rect((+1000-width/2, height/2), width/2, -4*height)
+    fill(0)
+    Text("Old representation",(-400,420),size =45)
+    Text("New representation",(420,420),size =45)
 
     #show atoms
     for a in atoms:
@@ -166,12 +173,12 @@ def draw():
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
     # saver()
 
 #
 run(frame_rate=30)
-# to_gif()
