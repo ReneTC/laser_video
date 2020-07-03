@@ -1,6 +1,6 @@
 from pymin import *
 
-frames = 100
+frames = 80
 
 
 def setup():
@@ -27,11 +27,6 @@ a31.n2_occ = 1
 atoms.append(a31)
 
 
-a41 = Atom3((-730+3*490,300))
-a41.n0_occ = 0
-a41.n1_occ = 1
-atoms.append(a41)
-
 # - - - - - - - -
 a12 = Atom3((-730,-390+180))
 a12.n0_occ = 0
@@ -47,11 +42,11 @@ atoms.append(a22)
 p22 = Photon(Vector(-730+490/2,-390+180),Vector(1,0),35)
 photons.append(p22)
 
-# a32 = Atom3((-730+2*490,-390+180))
-# atoms.append(a32)
-#
-# a42 = Atom3((-730+3*490,-390+180))
-# atoms.append(a42)
+a32 = Atom3((-730+2*490,-390+180))
+a32.n0_occ = 0
+a32.n1_occ = 1
+atoms.append(a32)
+
 def sq(col):
     fill(0)
 
@@ -60,6 +55,7 @@ def sq(col):
 
 def draw():
     translate(width/2,height/2)
+    translate(250,0)
     background(255)
     scale(1,-1)
     no_stroke()
@@ -89,8 +85,8 @@ def draw():
     Text("1 -> 3 Absorption",(-730+490,100),size =30)
     Text("Radiationless transition",(-730+2*490,120),size =30)
     Text("(very fast)",(-730+2*490,80),size =30)
-    Text("Meta stable",(-730+3*490,120),size =30)
-    Text("(spontaneous emssion rare)",(-730+3*490,80),size =30)
+    Text("(spontaneous emssion rare)",(-730+2*490,80-100-390),size =30)
+    Text("Meta stable",(-730+2*490,120-100-390),size =30)
     Text("1 -> 2 Stimulated emission",(-730,-390),size =30)
     Text("1 -> 3 Stimulated emission",(-730+490,-390),size =30)
     # Text("...",(-730+2*490,-390),size =30)
@@ -116,20 +112,20 @@ def draw():
                     if p.energy == 35:
                         a.stim_emis(p,photons)
 
-    if frame_count == 10:
+    if frame_count == 30:
         a31.n1_occ = 1
         a31.n2_occ = 0
     if frame_count == 50:
-        a41.de_excite_2_1(photons)
+        a32.de_excite_2_1(photons)
     with push_style():
         alpha_out(0,color=(255,255,255))
         square((0,0),2000, mode='CENTER')
     with push_style():
-        alpha_in(80,color=(255,255,255))
+        alpha_in(60,color=(255,255,255))
         square((0,0),2000, mode='CENTER')
     saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
-# run()
-to_gif()
+run()
