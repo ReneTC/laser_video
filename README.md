@@ -176,4 +176,6 @@ I didn't mention about other different kinds of lasers. For example how we can p
 
 - I would like to thank [Pretty Much Physics](https://www.youtube.com/channel/UCVa8De6q6aOjtx_TEiDBaMw), [Zap Physics](https://www.youtube.com/channel/UCGTW2EYuaDEthocEP30xQtg) and [Everything Science](https://www.youtube.com/channel/UCtvilhINC4WP6q9pvqt5Ulw) for helping me correcting this article. they all run brilliant and interesting science YouTube channels.
 
-- I would also like to thank generous Patrons for supporting this article. Help me produce more physics content on [patreon.com/higgsino](https://www.patreon.com/Higgsino).
+- I would also like to thank generous Patrons for supporting this article. Help me produce more free physics content for the world on [patreon.com/higgsino](https://www.patreon.com/Higgsino).
+
+- Thank you to the kind folks over at [p5py](https://github.com/p5py/p5) for specifically creating a save-frame function so I could use their python package to make all these animations. 
