@@ -161,7 +161,7 @@ In a real laser, Photons will bounce around the mirror a billion times per secon
 
 ### That's all for lasers or what?
 
-If you want to learn more about lasers, I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level system is.
+If you want to learn more about lasers, I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level atom for a gain medium is.
 
 I didn't mention about other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
 
@@ -173,3 +173,7 @@ I didn't mention about other different kinds of lasers. For example how we can p
 
 
 ### Thank you
+
+- I would like to thank [Pretty Much Physics](https://www.youtube.com/channel/UCVa8De6q6aOjtx_TEiDBaMw), [Zap Physics](https://www.youtube.com/channel/UCGTW2EYuaDEthocEP30xQtg) and [Everything Science](https://www.youtube.com/channel/UCtvilhINC4WP6q9pvqt5Ulw) for helping me correcting this article. they all run brilliant and interesting science YouTube channels.
+
+- I would also like to thank generous Patrons for supporting this article. Help me produce more physics content on [patreon.com/higgsino](https://www.patreon.com/Higgsino).
