@@ -166,11 +166,11 @@ def draw():
         translate(200,250)
         scale_in_out(70,999)
         square((0,0),50, mode = "CENTER")
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 
 
 run(frame_rate=30)
-# to_gif()

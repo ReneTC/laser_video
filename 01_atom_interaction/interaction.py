@@ -167,11 +167,11 @@ def draw():
     with push_style():
         alpha_in_out(20,65)
         Text("Stimulated Absorption",(290,280),size=50)
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 
 
 run(frame_rate=30)
-to_gif()

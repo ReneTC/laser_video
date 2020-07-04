@@ -92,9 +92,7 @@ So there is a huge problem with our setup. I'll put in more atoms and let's see 
 
 <img src="./08_cavity_flash/cavity_flash/cavity_flash.gif"/>
 
-It looks quite confusing, but what I want to show is: no matter what we do, no more than 50% of the atoms in our cavity are excited at once. Say we are at a point in time where 50% are excited. When the pump flashes it will simply invert the atoms: all the atoms that weren't excited will absorb a photon and all atoms that were excited will be hit with the pump causing stimulated emission and the atom will end up in the unexcited state. Here is the same animation with a plot of the percentage of atoms excited.
-
-
+It looks quite confusing, but what I want to show is: no matter what we do, it's physically impossible to have more than 50% of the atoms in the cavity excited at once. Why? Say we are at a point in time where 50% are excited. When the pump flashes it will simply invert the atoms: all the atoms that weren't excited will absorb a photon and all atoms that were excited will be hit with the pump causing stimulated emission and the atom will end up in the unexcited state. Here is the same animation with a plot of the percentage of atoms excited.
 
 <img src="./08_cavity_flash/cavity_flash_plot/cavity_flash_plot.gif"/>
 
@@ -163,9 +161,9 @@ In a real laser, Photons will bounce around the mirror a billion times per secon
 
 ### That's all for lasers or what?
 
-I skipped a few important concepts for the laser. Most importantly: how we get coherent light with optical resonance, by producing a standing wave in the cavity. Another thing I skipped is how nice a 4 level system is.
+If you want to learn more about lasers, I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level system is.
 
-I also didn't talk about other different kinds of lasers - like how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
+I didn't mention about other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
 
 *Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.*
 

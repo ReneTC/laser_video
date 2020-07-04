@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 250
+frames = 285
 class Atom:
     def __init__(self):
         self.pos = Vector(0,0)
@@ -105,7 +105,7 @@ class Photon:
         self.created = frame_count
 
     def show(self):
-        velocity = 15
+        velocity = 10
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -138,11 +138,11 @@ def setup():
 
 atom = Atom()
 atoms = [atom]
-phot5 = Photon(Vector(-400,180),Vector(1,0),1)
-phot = Photon(Vector(-400,190),Vector(1,0),300)
-phot2 = Photon(Vector(-400,200),Vector(1,0),100)
-phot3 = Photon(Vector(-400,210),Vector(1,0),150)
-phot4 = Photon(Vector(-400,220),Vector(1,0),270)
+phot5 = Photon(Vector(-430,180),Vector(1,0),1)
+phot = Photon(Vector(-420,190),Vector(1,0),300)
+phot2 = Photon(Vector(-390,200),Vector(1,0),100)
+phot3 = Photon(Vector(-460,210),Vector(1,0),150)
+phot4 = Photon(Vector(-350,220),Vector(1,0),270)
 photons = [phot,phot2,phot3,phot4,phot5]
 
 def draw():

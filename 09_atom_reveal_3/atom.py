@@ -63,9 +63,9 @@ def draw():
     background(255)
     scale(1,-1)
     atom.show()
-    saver()
+    # saver()
     if frame_count > frames:
-        to_gif()
+        # to_gif()
         exit()
 
 run()

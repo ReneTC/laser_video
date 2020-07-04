@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 130
+frames = 180
 class Atom:
     def __init__(self):
         self.pos = Vector(0,0)
@@ -105,7 +105,7 @@ class Photon:
         self.created = frame_count
 
     def show(self):
-        velocity = 15
+        velocity = 10
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -161,10 +161,10 @@ def draw():
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite()
 
-    # saver()
+    saver()
     if frame_count > frames:
+        to_gif()
         exit()
 
 
-# to_gif()
 run(frame_rate=30)
