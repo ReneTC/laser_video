@@ -1,6 +1,5 @@
-# The physics of a laser
+# The surprisingly simple physics of a laser
 The laser is one of the most important tools for ~~advances in science~~  teasing cats.
-
 
 <img src="https://media1.tenor.com/images/2f0877e3615e63d0bf78a00cdf8d2273/tenor.gif?itemid=3454835"/>
 
@@ -98,7 +97,9 @@ It looks quite confusing, but what I want to show is: no matter what we do, it's
 
 So no matter what we do, we are guaranteed that at any given time less than 50 % of the atoms in the cavity will by excited. *It's a huge problem* because we can't multiply photons in this system.  The reason is the photons will have a higher chance of getting absorbed than getting duplicated by stimulated emission. On average this system eats the photons more than amplifying them.
 
-To obtain optical gain we need more than 50% of the atoms to be excited. When more than 50% of the atoms are excited we call this **population inversion**. So we need to fix our system?
+To obtain optical gain we need more than 50% of the atoms to be excited. We call this **population inversion**, specifically when 50% or more of the atoms have electrons excited in the state we use for lasering - that's state 1 in our example.
+
+We need to change something for our laser to work.
 
 ### 3 level atom
 Well, the fix is actually simple! We find an atom with a 3 energy system:
@@ -113,7 +114,7 @@ The example shows the atom absorbing an ultraviolet light, going from state 1->3
 
 <img src="uv.jpg">
 
-In this picture, the room is actually lit up with UV rays, but our eyes can't see that frequency so the room appears dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then it will spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible to our eyes, but 5.00 eV is not! The picture shows green and red/orange photons being emitted in this process.
+*Another, but short side-note.* In this UV picture, the room is actually lit up with UV rays, but our eyes can't see that frequency so the room appears dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then it will spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible to our eyes, but 5.00 eV is not! The picture shows green and red/orange light from the body paint, being emitted in this process.
 
 Let me quickly mention one last mechanism of the atom or molecule state: You can also have **radiationless transitions**, where the electron quantum jumps to another state without sending out a photon. Of course, the energy has to go somewhere when it isn't converted to a photon. For example, it could go to kinetic energy by a collision between two atoms, to an Auger process where other electrons get the energy, or to vibrational-rotational relaxation.
 
@@ -161,9 +162,7 @@ In a real laser, Photons will bounce around the mirror a billion times per secon
 
 ### That's all for lasers or what?
 
-If you want to learn more about lasers, I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level atom for a gain medium is.
-
-I didn't mention about other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
+No! But I'll save the following for part2: I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level atom for a gain medium is. I didn't mention about other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
 
 *Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.*
 
@@ -175,7 +174,5 @@ I didn't mention about other different kinds of lasers. For example how we can p
 ### Thank you
 
 - I would like to thank [Pretty Much Physics](https://www.youtube.com/channel/UCVa8De6q6aOjtx_TEiDBaMw), [Zap Physics](https://www.youtube.com/channel/UCGTW2EYuaDEthocEP30xQtg) and [Everything Science](https://www.youtube.com/channel/UCtvilhINC4WP6q9pvqt5Ulw) for helping me correcting this article. they all run brilliant and interesting science YouTube channels.
-
 - I would also like to thank generous Patrons for supporting this article. Help me produce more free physics content for the world on [patreon.com/higgsino](https://www.patreon.com/Higgsino).
-
-- Thank you to the kind folks over at [p5py](https://github.com/p5py/p5) for specifically creating a save-frame function so I could use their python package to make all these animations. 
+- Thank you to the kind folks over at [p5py](https://github.com/p5py/p5) for specifically creating a save-frame function so I could use their python package to make all these animations.
