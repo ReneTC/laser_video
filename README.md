@@ -5,6 +5,8 @@ The laser is one of the most important tools for ~~advances in science~~  teasin
 
 In this article, I'll show some properties of the atom and how the atom interacts with light. I'll then use this knowledge to simulate a working laser.
 
+Help me produce more free physics content, like this article: [become my Patreon](https://www.patreon.com/Higgsino) or by support by [watching other interesting physics content from me](https://www.youtube.com/c/Higgsinophysics/featured?view_as=subscriber).
+
 ### Light and atom interaction
 The whole process of lasering relies on a special interaction between the atom and the light. So let's examine an atom. For simplicity, let's look at an atom with only one electron. Two states are shown by the two electron orbitals with a nucleus in the center.
 
