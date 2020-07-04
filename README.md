@@ -7,13 +7,13 @@ The laser is one of the most important tools for ~~advances in science~~  teasin
 In this article, I'll show some properties of the atom and how the atom interacts with light. I'll then use this knowledge to simulate a working laser.
 
 ### Light and atom interaction
-The whole process of lasing relies on a special interaction between the atom and the light. So let's examine an atom. For simplicity, let's look at an atom with only one electron. Two states are shown by the two electron orbitals with a nucleus in the center.
+The whole process of lasering relies on a special interaction between the atom and the light. So let's examine an atom. For simplicity, let's look at an atom with only one electron. Two states are shown by the two electron orbitals with a nucleus in the center.
 
 <img src="./00_atom_reveal/atom/atom.gif"/>
 
 The picture of the atom is completely wrong, but it gets the physics right because the distance between the two states represents energy levels for the electron.
 
-As you know electrons can ONLY exist in a state and not in between two states. To switch state the electron will do a quantum jump: that is, teleport to another state. But to teleport requires some energy. One way to get the energy is for the electron to absorb a photon. This is called **Stimulated Absorption**. Once the electron is in an excited state, it will return to a lower energy state (deexcite) after some random time depending on the half-life of the excited state. This process is called **Spontaneous Emission**, and releases a photon in a random direction.
+As you know electrons can ONLY exist in a state and not in between two states. To switch state the electron will do a **quantum jump**: It transitions to another state. But a transition requires some energy. One way to get the energy is for the electron to absorb a photon. This is called **Stimulated Absorption**. Once the electron is in an excited state, it will return to a lower energy state (relax) after some random time depending on the half-life of the excited state. This process is called **Spontaneous Emission**, and releases a photon in a random direction.
 
 <img src="./01_atom_interaction/interaction/interaction.gif"/>
 
@@ -21,7 +21,7 @@ Any photon that interacts with the electron won't necessarily excite it. To exci
 
 <img src="./02_correct_color/correct_color/correct_color.gif"/>
 
-Here is an example: When a photon of incorrect energy of 5.00 eV, which corresponds to a ultraviolet photon, passes the electron nothing happens. But when a photon with 2.00 eV passes the electron, the electron is excited. After some random time, the electron deexcites and sends out a 2.00 eV photon in a random direction.
+Here is an example: When a photon of incorrect energy of 5.00 eV, which corresponds to a ultraviolet photon, passes the electron, the energy is too high and it can't excite the electron. But when a photon with 2.00 eV passes the electron, the electron is excited. After some time, the electron relaxes and sends out a 2.00 eV photon in a random direction.
 
 <img src="./03_correct_color_interact/correct_color_int/correct_color_int.gif"/>
 
@@ -34,7 +34,7 @@ The atoms in the plastic have been illuminated by white light during the day. Wh
 <img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
 
 
-Now back to our atom. It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron interacts with a photon of the same energy used to excite the electron. In the example below the electron is excited to a 2.00 eV state. A 2.00 eV photon is then able to interact with the electron. The interaction deexcites the electron and emits a 2.00 eV photon.
+Now back to our atom. It turns out there is one more type of interaction between light and atoms: the **Stimulated emission**. This interaction happens when an excited electron interacts with a photon of the same energy used to excite the electron. In the example below the electron is excited to a 2.00 eV state. A 2.00 eV photon is then able to interact with the electron. The interaction relaxes the electron and emits a 2.00 eV photon.
 
 <img src="./04_stim_em/stim_em/stim_em.gif"/>
 
@@ -57,7 +57,7 @@ Of course, we can also represent stimulated emission with the new representation
 
 To exploit the stimulated emission processes, let's make an **optical cavity**. It's a cylinder, with mirrors in the ends. When photons hit the mirrors they will change direction, but when they hit the outer wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity, there will be what's called a **gain medium**. It's a material that can perform stimulated emission for us. A real-world example could be a synthetic ruby crystal or Helium-Neon gas.
 
-The cavity will also contain an **optical pump**. In fact, there are multiples all around the circumference of the cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
+The cavity will also contain an **optical pump**. In fact, there are multiple pumps all around the circumference of the cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
 <img src="./07_cavity/cavity/cavity.gif"/>
 
@@ -103,28 +103,27 @@ So no matter what we do, we are guaranteed that at any given time less than 50 %
 To obtain optical gain we need more than 50% of the atoms to be excited. When more than 50% of the atoms are excited we call this **population inversion**. So we need to fix our system?
 
 ### 3 level atom
-Well, the fix is actually simple! We find an atom with 3 energy system available:
+Well, the fix is actually simple! We find an atom with a 3 energy system:
 
 <img src="./09_atom_reveal_3/atom/atom.gif"/>
 
-This atom has a higher energy state available, and could for example absorb the 5.00 eV UV-photon that the 2 level atom couldn't, given that the energy difference between state 1 and state 3 is 5.00 eV.
+This atom has a higher energy state available, and could for example absorb the 5.00 eV UV-photon that the 2 level atom couldn't as the energy difference between state 1 and state 3 is 5.00 eV.
 
 <img src="./09_atom_reveal_3/correct_color_int/correct_color_int.gif"/>
 
-The example showed the atom absorbed a uv light, going from state 1->3. then release a blue photon from state 3->2. and again this red light from state 2->1 as we have seen before. This process is called **photoluminescence**, which you might know from UV parties.
+The example shows the atom absorbing an ultraviolet light, going from state 1->3, then the atom release a blue photon from state 3->2 and later releases a red photon going from state 2->1. This process is called **photoluminescence**, which you might know from UV parties.
 
 <img src="uv.jpg">
 
-The room is actually lightened up with UV rays, but our eyes can't see that frequency so the room appears dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible for our eyes, but 5.00 eV is not!
+In this picture, the room is actually lit up with UV rays, but our eyes can't see that frequency so the room appears dark. But if we have a 3-level atom material that will absorb the UV light at state 3, then it will spontaneously emit to level 2 and then 1. In our example, The 5.00 eV photon got absorbed, then released a 3.00 eV blue photon and then a 2.00 eV red photon. 3.00 eV and 2.00 eV is visible to our eyes, but 5.00 eV is not! The picture shows green and red/orange photons being emitted in this process.
 
-
-let me quickly mention one last mechanism of the atom or molecule state: You can also have **radiationless transitions**, where the electron quantum jumps to another state without sending out an atom. Of course, the energy has to go somewhere when it isn't converted to a photon. It could go to kinetic energy, by a collision between the atoms, an auger process where other electrons get the energy, or by vibrational-rotational relaxation.
+Let me quickly mention one last mechanism of the atom or molecule state: You can also have **radiationless transitions**, where the electron quantum jumps to another state without sending out a photon. Of course, the energy has to go somewhere when it isn't converted to a photon. For example, it could go to kinetic energy by a collision between two atoms, to an Auger process where other electrons get the energy, or to vibrational-rotational relaxation.
 
 We won't care about the actual processes, but it's beneficial for the population inversion if we use an atom that can go to from state 3 to 2 in a radiationless transition.
 
 We will also like the atom to have a few other features:
-- transition 3 -> 2 should have a very short life-time.
-- transition 2 -> 1 should be meta-stable, such that the life-time is much longer!
+- transition 3 -> 2 should have a very short half-life.
+- transition 2 -> 1 should be meta-stable, such that the half-life is much longer!
 
 ### Working laser
 
@@ -136,7 +135,7 @@ Alright let's use the other representation again for the atom. These are all the
 
 <img src="./10_3_level_cavity/happenings/happenings.gif"/>
 
-Let's put our 3 level atom in the cavity. The flash energy will now be set to 5.00 eV. So each time the flash flashes, all atoms have a 50% of being hit as before. If the atom is hit 3 things can happen depending on the state the atom is in:
+Let's put our 3 level atom in the cavity. The flash energy will now be configured to send out 5.00 eV photons. So as before each time the pump flashes, all atoms have a chance 50% of being hit as before. If the atom is hit 3 things can happen depending on the state the atom is in:
 
 - If the atom is in the ground state (state 1), it will be excited to state 3.
 - If the atom is in state 2, the 5.00 eV doesn't match any energy levels and so nothing will happen.
@@ -146,7 +145,7 @@ Let's run the system.
 
 <img src="./10_3_level_cavity/cavity_flash_plot/cavity_flash_plot.gif"/>
 
-Since state 3 will quickly deexite to a much more stable state 2, over 50% of the atoms can easily be excited. The flash now doesn't de-excited the atoms in state 2 because the energy is 5.00 eV.
+Since state 3 will quickly deexite to a much more stable state 2, over 50% of the atoms can easily be excited. The flash now won't relaxes the atoms in state 2 because the energy is 5.00 eV.
 
 Now since over 50% are excited, photons will have a higher chance of getting amplified by stimulated emission, instead of getting eaten by absorption.
 
@@ -160,7 +159,7 @@ You can see a huge number of photons builds up! And these photons are from stimu
 
 <img src="./11_photons/light/light.gif"/>
 
-In a real laser, Photons will bounce around the mirror a billion times pr second, and there would be billions of atoms in there as well.
+In a real laser, Photons will bounce around the mirror a billion times per second, and there would be billions of atoms in there as well.
 
 ### That's all for lasers or what?
 
@@ -170,7 +169,7 @@ I also didn't talk about other different kinds of lasers - like how we can pump 
 
 *Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.*
 
-*Happy lasing!*
+*Happy lasering!*
 
 <img src="./cat.jpg"/>
 

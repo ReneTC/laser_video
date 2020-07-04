@@ -1,7 +1,7 @@
 from pymin import *
 import random
 
-frames = 130
+frames = 160
 class Atom:
     def __init__(self):
         self.pos = Vector(0,0)
@@ -106,7 +106,7 @@ class Photon:
         self.created = frame_count
 
     def show(self):
-        velocity = 15
+        velocity = 10
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -161,12 +161,12 @@ def draw():
 
 
     with push_style():
-        alpha_in_out(65,110)
-        Text("Emission",(-120,350),size=50)
+        alpha_in_out(75,120)
+        Text("Spontaneous Emission",(-120,350),size=50)
 
     with push_style():
-        alpha_in_out(20,58)
-        Text("Absorption",(200,250),size=50)
+        alpha_in_out(20,65)
+        Text("Stimulated Absorption",(290,280),size=50)
     # saver()
     if frame_count > frames:
         exit()
@@ -174,4 +174,4 @@ def draw():
 
 
 run(frame_rate=30)
-# to_gif()
+to_gif()

@@ -1,8 +1,8 @@
 from pymin import *
 import random
 
-frames = 140
-class Atom2:
+frames = 160
+class Atom:
     def __init__(self):
         self.pos = Vector(0,0)
 
@@ -16,8 +16,8 @@ class Atom2:
 
         self.inteaction_frame = -20
 
-        self.n0_occ = 1
-        self.n1_occ = 0
+        self.n0_occ = 0
+        self.n1_occ = 1
 
 
     def show(self):
@@ -93,15 +93,15 @@ class Atom2:
         new_pos = Vector(ran_x,ran_y).normalize()*100+self.n0_pos/2+self.n1_pos/2
         photons.append(Photon(new_pos,Vector(ran_x,ran_y),self.n1 - self.n0 ))
 
-    def stim_emis(self, photon,photons):
+    def stim_emis(self, photon):
         if photon.energy == self.n1 - self.n0:
             self.inteaction_frame = frame_count
             self.n0_occ = 1
             self.n1_occ = 0
             ran_y = random.randint(-15,15)
-            photons.append(Photon2(photon.pos + Vector(0,-30),photon.dir,self.n1 - self.n0 ))
+            photons.append(Photon(photon.pos + Vector(0,-30),photon.dir,self.n1 - self.n0 ))
 
-class Photon2:
+class Photon:
     def __init__(self,pos,direc,energy):
         self.pos = pos
         self.dir = direc.normalize()
@@ -110,7 +110,7 @@ class Photon2:
         self.created = frame_count
 
     def show(self):
-        velocity = 6
+        velocity = 10
         self.pos = self.pos + self.dir * velocity
         with push_matrix():
             translate(self.pos[0],self.pos[1])
@@ -133,27 +133,17 @@ def setup():
     size(width, height)
 
 
-atom = Atom2()
-atom2 = Atom((900,0))
-atoms = [atom,atom2]
-phot = Photon2(Vector(-400+200,200),Vector(1,0),100)
-phot1 = Photon2(Vector(-700+230,300),Vector(1,0),100)
-
-phot2 = Photon(Vector(1100-10,0),Vector(-1,0),15)
-phot3 = Photon(Vector(1300,0),Vector(-1,0),15)
-photons = [phot,phot1,phot2,phot3]
+atom = Atom()
+atoms = [atom]
+phot = Photon(Vector(-400,300),Vector(1,0),100)
+phot2 = Photon(Vector(-1400,200),Vector(1,0),100)
+photons = [phot,phot2]
 
 def draw():
     translate(width/2,height/2)
-    translate(-500,0)
     background(255)
     scale(1,-1)
     scale(1.2)
-
-    no_stroke()
-    fill(240)
-    rect((width/2-500, height/2), width/2, -4*height)
-    fill(0)
 
     #show atoms
     for a in atoms:
@@ -166,27 +156,27 @@ def draw():
     # listen for photon in atom (should be all atoms i ground state)
     for a in atoms:
         for p in photons:
-            if a.interaction(p) and frame_count > 5 + a.inteaction_frame:
+            if a.interaction(p):
                 if a.n0_occ == 1:
                     photons.remove(p)
                     a.excite()
                 elif a.n1_occ == 1:
-                    a.stim_emis(p,photons)
+                    a.stim_emis(p)
 
     # for all excited atoms randomly see if they should de-excite
     # for a in atoms:
     #     if a.n1_occ == 1:
     #         if random.randint(0,a.n1_ht) == 1:
     #             a.de_excite()
-    # saver()
+    saver()
     with push_style():
-        alpha_out(0,color=(255,255,255))
-        square((0,0),20000, mode='CENTER')
+        alpha_in_out(30,100)
+        Text("Stimulated emission",(0,420),size=50)
     with push_style():
-        alpha_in(120,color=(255,255,255))
-        square((0,0),20000, mode='CENTER')
+        alpha_in_out(120,140)
+        Text("(Stimulated absorption)",(0,250),size=30)
     if frame_count > frames:
-        # to_gif()
+        to_gif()
         exit()
 
 

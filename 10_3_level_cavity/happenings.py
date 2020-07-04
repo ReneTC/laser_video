@@ -83,10 +83,10 @@ def draw():
     stroke(0)
     Text("1 -> 2 Absorption",(-730,100),size =30)
     Text("1 -> 3 Absorption",(-730+490,100),size =30)
-    Text("Radiationless transition",(-730+2*490,120),size =30)
+    Text("Radiationless transition 3 -> 2",(-730+2*490,120),size =30)
     Text("(very fast)",(-730+2*490,80),size =30)
     Text("(spontaneous emssion rare)",(-730+2*490,80-100-390),size =30)
-    Text("Meta stable",(-730+2*490,120-100-390),size =30)
+    Text("Meta stable 2 -> 1",(-730+2*490,120-100-390),size =30)
     Text("1 -> 2 Stimulated emission",(-730,-390),size =30)
     Text("1 -> 3 Stimulated emission",(-730+490,-390),size =30)
     # Text("...",(-730+2*490,-390),size =30)
@@ -125,7 +125,7 @@ def draw():
         square((0,0),2000, mode='CENTER')
     saver()
     if frame_count > frames:
-        to_gif()
         exit()
 
 run()
+to_gif()
