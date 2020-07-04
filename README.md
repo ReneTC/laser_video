@@ -13,7 +13,7 @@ The whole process of lasering relies on a special interaction between the atom a
 
 The picture of the atom is completely wrong, but it gets the physics right because the distance between the two states represents energy levels for the electron.
 
-As you know electrons can ONLY exist in a state and not in between two states. To switch state the electron will do a **quantum jump**: It transitions to another state. But a transition requires some energy. One way to get the energy is for the electron to absorb a photon. This is called **Stimulated Absorption**. Once the electron is in an excited state, it will return to a lower energy state (relax) after some random time depending on the half-life of the excited state. This process is called **Spontaneous Emission**, and releases a photon in a random direction.
+As you know electrons can *ONLY* exist in a state and not in between two states. To switch state the electron will do a **quantum jump**: A transition to another state. But a transition requires some energy. One way to get the energy is for the electron to absorb a photon. This is called **Stimulated Absorption**. Once the electron is in an excited state, it will return to a lower energy state (relax) after some random time depending on the lifetime of the excited state. This process is called **Spontaneous Emission**, and releases a photon in a random direction.
 
 <img src="./01_atom_interaction/interaction/interaction.gif"/>
 
@@ -29,7 +29,7 @@ Here is an example: When a photon of incorrect energy of 5.00 eV, which correspo
 
 <img src="stars.jpg"/>
 
-The atoms in the plastic have been illuminated by white light during the day. White light consists of all visible colors. Green light got absorbed by the atoms in the plastic. The excited state for the specific atoms in the plastic have a very long half-life - we call this a **meta-stable state**. The reason why the state has a long half-life has to do with quantum mechanics, specifically the **selection rules**. So after some long time, the electron undergoes spontaneous emission hours later at night! This process is called **phosphorescence**.
+The atoms in the plastic have been illuminated by white light during the day. White light consists of all visible colors. Green light got absorbed by the atoms in the plastic. The excited state for the specific atoms in the plastic have a very long lifetime - we call this a **meta-stable state**. The reason why the state has a long lifetime has to do with quantum mechanics, specifically the **selection rules**. So after some long time, the electron undergoes spontaneous emission hours later at night! This process is called **phosphorescence**.
 
 <img src="./03_correct_color_interact/correct_color_int_long_half_life/correct_color_int_long_half_life.gif"/>
 
@@ -55,7 +55,7 @@ Of course, we can also represent stimulated emission with the new representation
 
 ### Optical Cavity
 
-To exploit the stimulated emission processes, let's make an **optical cavity**. It's a cylinder, with mirrors in the ends. When photons hit the mirrors they will change direction, but when they hit the outer wall they will fly out of the system - I will just remove them from our drawing. Inside the cavity, there will be what's called a **gain medium**. It's a material that can perform stimulated emission for us. A real-world example could be a synthetic ruby crystal or Helium-Neon gas.
+To exploit the stimulated emission processes, let's make an **optical cavity**. It's a cylinder, with mirrors in the ends. When photons hit the mirrors they will change direction, but when they hit the outer wall they will fly out of the system - I will just remove them from our simulation. Inside the cavity, there will be what's called a **gain medium**. It's a material that can perform stimulated emission for us. A real-world example could be a synthetic ruby crystal or Helium-Neon gas.
 
 The cavity will also contain an **optical pump**. In fact, there are multiple pumps all around the circumference of the cavity but I'll just draw it on the top. The pump is just a very strong flashing light source.
 
@@ -122,8 +122,8 @@ Let me quickly mention one last mechanism of the atom or molecule state: You can
 We won't care about the actual processes, but it's beneficial for the population inversion if we use an atom that can go to from state 3 to 2 in a radiationless transition.
 
 We will also like the atom to have a few other features:
-- transition 3 -> 2 should have a very short half-life.
-- transition 2 -> 1 should be meta-stable, such that the half-life is much longer!
+- transition 3 -> 2 should have a very short lifetime.
+- transition 2 -> 1 should be meta-stable, such that the lifetime is much longer!
 
 ### Working laser
 
