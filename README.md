@@ -128,15 +128,15 @@ We will also like the atom to have a few other features:
 
 ### Working laser
 
-This is the overall interaction we are interested in in the cavity:
+This is the desired interaction in the cavity:
 
 <img src="./09_atom_reveal_3/meta_stable/meta_stable.gif"/>
 
-Alright let's use the other representation again for the atom. These are all the 6 different interaction that can happen
+Alright let's use the other representation again for the atom. These are all the 6 possible interactions:
 
 <img src="./10_3_level_cavity/happenings0/happenings0.gif"/>
 
-Let's put our 3 level atom in the cavity. The flash energy will now be configured to send out 5.00 eV photons. So as before each time the pump flashes, all atoms have a chance 50% of being hit as before. If the atom is hit 3 things can happen depending on the state the atom is in:
+Let's put our new 3 level atom in the cavity. The pump/flash energy will now be configured to send out 5.00 eV photons. So as before each time the pump flashes, all atoms have a chance 50% of being hit. If the atom is hit 3 things can happen depending on the initial state of the atom:
 
 - If the atom is in the ground state (state 1), it will be excited to state 3.
 - If the atom is in state 2, the 5.00 eV doesn't match any energy levels and so nothing will happen.
@@ -146,25 +146,25 @@ Let's run the system.
 
 <img src="./10_3_level_cavity/cavity_flash_plot/cavity_flash_plot.gif"/>
 
-Since state 3 will quickly deexite to a much more stable state 2, over 50% of the atoms can easily be excited. The flash now won't relaxes the atoms in state 2 because the energy is 5.00 eV.
+Since state 3 will quickly deexite to a much more stable state 2, over 50% of the atoms can easily be excited. Now the flash will not relax atoms in state 2 because the energy is 5.00 eV, and not 2.00 eV anymore.
 
-Now since over 50% are excited, photons will have a higher chance of getting amplified by stimulated emission, instead of getting eaten by absorption.
+When over 50% of the atoms are excited, photons will have a higher chance of getting amplified by stimulated emission, instead of getting eaten by absorption.
 
 To make a working laser, we just need to run the laser for some more time. And to get light out, we let one mirror reflect photons 90% such that 10% of the generated radiation can be emitted out of the laser cavity. The mirror is called the **output coupler**, while the other 100% reflecting mirror is called a **high reflector**.
 
-I won't show different reflecting mirrors, but I will let the simulation run for some time, so you can see how the optical laser builds up a high number of coherent photons. (Click the image below or [this link](https://www.youtube.com/watch?v=FssXv8QR7wU) to see the video, it was too long of a gif).
+I won't show different reflecting mirrors, but I will let the simulation run for some time, so you can see how the optical cavity builds up a high number of coherent photons. (Click the image below or [this link](https://www.youtube.com/watch?v=FssXv8QR7wU) to see the video, it was too long of a gif).
 
 <a href="http://www.youtube.com/watch?v=FssXv8QR7wU"><img src="./LASER00000.png"></a>
 
-You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase, and polarization is 100% the same! So this triangle representation of photons isn't that clear how nice the light is we get out. If I use the old wave representation for the photon it shows how nice aligned the light is:
+You can see a huge number of photons builds up! And these photons are from stimulated emission, so the direction, phase, and polarization is identical! This triangle representation of photons does not clearly show how nice the resulting light is. If I use the old wave representation for the photon it shows how nicely aligned/coherent the light is:
 
 <img src="./11_photons/light/light.gif"/>
 
-In a real laser, Photons will bounce around the mirror a billion times per second, and there would be billions of atoms in there as well.
+In a real laser, photons will bounce around the mirror a billion times per second, and there would be billions of atoms in there as well.
 
 ### That's all for lasers or what?
 
-No! But I'll save the following for part2: I didn't talk about how we get coherent light with optical resonance. I also didn't talk about how nice a 4 level atom for a gain medium is. I didn't mention about other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
+There are many other interesting facts about lasers, but I'll save that for part 2.  Specifically, I didn't talk about how we get coherent light with optical resonance. I also didn't talk about the advantage of using a 4 level atom for the gain medium. Lastly, I didn't mention other different kinds of lasers. For example how we can pump with kinetic energy instead of light, or what type of lasers we are dealing with solid-state, gas, dye, or semiconductor lasers.
 
 *Cool physics, infinite scientific uses, and the best cat toy make lasers one of the most important discoveries.*
 
@@ -175,6 +175,6 @@ No! But I'll save the following for part2: I didn't talk about how we get cohere
 
 ### Thank you
 
-- I would like to thank [Pretty Much Physics](https://www.youtube.com/channel/UCVa8De6q6aOjtx_TEiDBaMw), [Zap Physics](https://www.youtube.com/channel/UCGTW2EYuaDEthocEP30xQtg) and [Everything Science](https://www.youtube.com/channel/UCtvilhINC4WP6q9pvqt5Ulw) for helping me correcting this article. they all run brilliant and interesting science YouTube channels.
+- I would like to thank [Pretty Much Physics](https://www.youtube.com/channel/UCVa8De6q6aOjtx_TEiDBaMw), [Zap Physics](https://www.youtube.com/channel/UCGTW2EYuaDEthocEP30xQtg), [Zap Physics](https://www.youtube.com/channel/UCCxOJkK9P136zmiKN03FFZg) and [Ancient Accounts](https://www.youtube.com/channel/UCtvilhINC4WP6q9pvqt5Ulw) for helping me correcting this article. They all run brilliant and interesting science YouTube channels.
 - I would also like to thank generous Patrons for supporting this article. Help me produce more free physics content for the world on [patreon.com/higgsino](https://www.patreon.com/Higgsino).
 - Thank you to the kind folks over at [p5py](https://github.com/p5py/p5) for specifically creating a save-frame function so I could use their python package to make all these animations.

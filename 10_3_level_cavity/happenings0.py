@@ -85,8 +85,8 @@ def draw():
     Text("(very fast)",(-x_move+2*x_delta,80),size =30)
     Text("(spontaneous emssion rare)",(-x_move+2*x_delta,80-100-390),size =30)
     Text("Meta stable 2 -> 1",(-x_move+2*x_delta,120-100-390),size =30)
-    Text("1 -> 2 Stimulated emission",(-x_move,-390),size =30)
-    Text("1 -> 3 Stimulated emission",(-x_move+x_delta,-390),size =30)
+    Text("2 -> 1 Stimulated emission",(-x_move,-390),size =30)
+    Text("3 -> 1 Stimulated emission",(-x_move+x_delta,-390),size =30)
     # Text("...",(-x_move+2*x_delta,-390),size =30)
     # Text("...",(-x_move+3*x_delta,-390),size =30)
 
