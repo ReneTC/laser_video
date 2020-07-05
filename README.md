@@ -134,7 +134,7 @@ This is the overall interaction we are interested in in the cavity:
 
 Alright let's use the other representation again for the atom. These are all the 6 different interaction that can happen
 
-<img src="./10_3_level_cavity/happenings/happenings.gif"/>
+<img src="./10_3_level_cavity/happenings0/happenings0.gif"/>
 
 Let's put our 3 level atom in the cavity. The flash energy will now be configured to send out 5.00 eV photons. So as before each time the pump flashes, all atoms have a chance 50% of being hit as before. If the atom is hit 3 things can happen depending on the state the atom is in:
 
