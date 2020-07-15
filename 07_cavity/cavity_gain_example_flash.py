@@ -59,9 +59,9 @@ def draw():
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-    saver()
+    # saver()
     if frame_count > frames:
-        to_gif()
+        # to_gif()
         exit()
 
 run(frame_rate=30)

@@ -12,7 +12,6 @@ photons = [phot1]
 for i in range(0,5):
     atoms.append(Atom((-650+i*140,0)))
 
-strope = Strope()
 
 def draw():
     fps_counter()
@@ -22,8 +21,6 @@ def draw():
     scale(1,-1)
     stroke(0)
     stroke_weight(4)
-    draw_box()
-    strope.show()
 
 
     # flash and randomly excite
@@ -59,9 +56,9 @@ def draw():
             if random.randint(0,a.n1_ht) == 1:
                 a.de_excite(photons)
 
-    saver()
+    # saver()
     if frame_count > frames:
-        to_gif()
+        # to_gif()
         exit()
 
 run(frame_rate=30)

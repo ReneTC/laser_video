@@ -58,7 +58,7 @@ def draw():
 
     # saver()
     if frame_count > frames:
-        to_gif()
-        # exit()
+        exit()
 
-run(frame_rate=30)
+# run(frame_rate=30)
+to_gif()
