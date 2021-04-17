@@ -99,6 +99,8 @@ It looks quite confusing, but what I want to show is: no matter what we do, it's
 
 So no matter what we do, we are guaranteed that at any given time less than 50 % of the atoms in the cavity will by excited. *It's a huge problem* because we can't multiply photons in this system.  The reason is the photons will have a higher chance of getting absorbed than getting duplicated by stimulated emission. On average this system eats the photons more than amplifying them.
 
+<img src="population_iversion.gif"/>
+
 To obtain optical gain we need more than 50% of the atoms to be excited. We call this **population inversion**, specifically when 50% or more of the atoms have electrons excited in the state we use for lasering - that's state 1 in our example.
 
 We need to change something for our laser to work.
